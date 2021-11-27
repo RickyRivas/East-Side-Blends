@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "price": "12.99",
+        "url": "https://rwt1.netlify.app/products"
+    },
+    {
+        "id": "2",
+        "price": "10.99",
+        "url": "https://rwt1.netlify.app/products"
+    },
+    {
+        "id": "3",
+        "price": "9.99",
+        "url": "https://rwt1.netlify.app/products"
+    },
+    {
+        "id": "4",
+        "price": "12.99",
+        "url": "https://rwt1.netlify.app/products"
+    }
+]

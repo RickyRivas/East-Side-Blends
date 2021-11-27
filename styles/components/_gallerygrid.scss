@@ -1,0 +1,115 @@
+@media (min-width: 0px) {
+    .barber-grid {
+        width: 100%;
+        display: grid;
+        height: max-content;
+        grid-template-rows: repeat(3, 1fr);
+
+        .grid-item {
+            height: 300px;
+            width: 100%;
+            position: relative;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+            }
+
+            .overlay {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .7);
+                top: 0;
+                left: 0;
+                padding: $padding-md;
+                opacity: 0;
+                transition: .8s ease-in-out;
+                border: 5px solid $primary;
+                cursor: pointer;
+
+                h4 {
+                    color: white;
+                    margin-bottom: $margin-md;
+                }
+
+                p {
+                    color: $text-color;
+                    font-size: $font-size-base * .8;
+                    margin-bottom: $margin-md;
+                }
+                a {
+                    color: $primary;
+                    text-decoration: none;
+                    cursor: pointer;
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+        }
+        .grid-item:hover .overlay {
+            opacity: 1;
+            transition: .5s ease-in-out;
+            a {
+                display: block;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .barber-grid {
+        width: 100%;
+        margin: $margin-lg 0;
+        display: grid;
+        height: max-content;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+
+        .grid-item {
+            height: 300px;
+            width: 100%;
+            position: relative;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .barber-grid {
+        width: 100%;
+        margin: $margin-lg 0;
+        display: grid;
+        height: max-content;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+
+        .grid-item {
+            height: 350px;
+            width: 100%;
+            position: relative;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

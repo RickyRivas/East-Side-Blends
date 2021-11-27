@@ -1,0 +1,199 @@
+// Not in use
+
+@media (min-width: 0px) {
+    .barber-list-section {
+        width: 100%;
+        padding: 2em .5em;
+
+        & .barber-list {
+            display: grid;
+            grid-template-rows: auto;
+            place-items: center;
+            grid-gap: 1em;
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+
+            & .barber-list-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                width: 100%;
+                height: 150px;
+                max-width: 450px;
+
+                & .barber-list-item-img {
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    min-height: 150px;
+                    width: 150px;
+                }
+
+                & .barber-list-item-img-1 {
+                    background-image: url(/images/sosa.jpeg);
+                }
+
+                & .barber-list-item-img-2 {
+                    background-image: url(/images/vic.jpeg);
+                }
+
+                & .barber-list-item-img-3 {
+                    background-image: url(/images/yoroby.jpeg);
+                }
+
+                & .barber-list-item-img-4 {
+                    background-image: url(/images/jorge.jpeg);
+                }
+
+                & .barber-list-item-content {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    padding: .5em 0em .5em .5em;
+
+                    & :nth-child(1) {
+                        font-size: 1.1em;
+                        margin-bottom: .3em;
+                    }
+
+                    & :nth-child(2) {
+                        font-size: .8em;
+                        margin-bottom: 1em;
+                    }
+
+                    & :nth-child(3) {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        height: 100%;
+                        width: 100%;
+
+                        & a {
+                            font-size: 17px;
+                            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                            padding: 5px 20px;
+                            border-radius: 0;
+                            color: black;
+                            text-decoration: none;
+                            width: 110px;
+                            font-weight: unset;
+                            margin: 0;
+                            margin-right: 10px;
+                            letter-spacing: unset;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            white-space: nowrap;
+                            background: var(--standard-gold);
+                            &:hover {
+                                opacity: .8;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .barber-list-section {
+        width: 100%;
+        padding: 2em .5em;
+
+        & .barber-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            place-items: center;
+            grid-gap: 1em;
+            max-width: 1200px;
+            width: max-content;
+            margin: auto;
+
+            & .barber-list-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                width: 100%;
+                height: 150px;
+                max-width: 450px;
+                font-size: .8em;
+
+                & .barber-list-item-img {
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    min-height: 150px;
+                    width: 150px;
+                }
+
+                & .barber-list-item-img-1 {
+                    background-image: url(/images/sosa.jpeg);
+                }
+
+                & .barber-list-item-img-2 {
+                    background-image: url(/images/vic.jpeg);
+                }
+
+                & .barber-list-item-img-3 {
+                    background-image: url(/images/yoroby.jpeg);
+                }
+
+                & .barber-list-item-img-4 {
+                    background-image: url(/images/jorge.jpeg);
+                }
+
+                & .barber-list-item-content {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    padding: .5em 0em .5em .5em;
+
+                    & :nth-child(1) {
+                        font-size: 1.1em;
+                        margin-bottom: .3em;
+                    }
+
+                    & :nth-child(2) {
+                        font-size: .8em;
+                        margin-bottom: 1em;
+                    }
+
+                    & :nth-child(3) {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        height: 100%;
+                        width: 100%;
+
+                        & a {
+                            width: 110px;
+                            text-decoration: none;
+                            padding: .5em 0;
+                            font-weight: unset;
+                            white-space: nowrap;
+                            font-size: unset;
+                            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                            text-decoration: none;
+                            text-align: center;
+                            margin: 0;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

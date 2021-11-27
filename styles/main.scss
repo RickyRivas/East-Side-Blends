@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
+
+// 2. Base stuff
+@import "base/base";
+@import "abstracts/system";
+
+// 3. Layout-related sections
+@import "layout/header", "layout/footer";
+// swiper
+@import "swiper/swiper-bundle.min";
+
+// 4. Components
+@import "components/button";
+@import "components/loader";   
+@import "components/distributorCard";
+@import "components/miniGallery";
+@import "components/page-header";    
+@import "components/barberlist";
+@import "components/swiperGallery";
+@import "components/gallerygrid";
+@import "components/pageFooter";
+// 5. Page-specific styles
+@import "pages/home";
+@import "pages/about";
+@import "pages/services";
+@import "pages/products";
+@import "pages/gallery";   
+@import "pages/book";
+@import "pages/profile";           
