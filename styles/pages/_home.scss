@@ -292,7 +292,7 @@
 
         .item {
           display: grid;
-          grid-template-rows: 1fr auto;
+          grid-template-rows: 1fr max-content;
           width: 100%;
           max-width: 400px;
           box-shadow: $box-shadow;
@@ -310,6 +310,7 @@
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
+            background-color: white;
 
             h4 {
               font-size: $font-size-base * 1.3;

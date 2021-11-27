@@ -3025,8 +3025,9 @@ button.swiper-pagination-bullet {
   #master-barbers .container .grid .item {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr auto;
-        grid-template-rows: 1fr auto;
+    -ms-grid-rows: 1fr max-content;
+        grid-template-rows: 1fr -webkit-max-content;
+        grid-template-rows: 1fr max-content;
     width: 100%;
     max-width: 400px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -3052,6 +3053,7 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background-color: white;
   }
   #master-barbers .container .grid .item .item-body h4 {
     font-size: 1.3rem;
@@ -5019,6 +5021,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media (min-width: 0px) {
+  #profile-intro {
+    background-color: #f7f7f7;
+  }
   .profile-intro {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5034,7 +5039,7 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   .profile-intro .profile-img {
     width: 100%;
@@ -5163,7 +5168,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: grid;
     -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: .5rem;
     width: 100%;
   }
   #profile-services .container .services-grid .item {

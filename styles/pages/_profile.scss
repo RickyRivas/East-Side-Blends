@@ -1,11 +1,14 @@
 @media (min-width: 0px) {
+    #profile-intro {
+        background-color: $white-smoke;
+    }
     .profile-intro {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100vw;
         flex-direction: column;
-        padding: $padding-md;
+        padding: $padding-lg $padding-md;
 
          .profile-img {
             width: 100%;
@@ -108,7 +111,7 @@
             .services-grid {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-                grid-gap: 1rem;
+                grid-gap: .5rem;
                 width: 100%;
 
                 .item {
