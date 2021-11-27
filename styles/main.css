@@ -2888,6 +2888,7 @@ button.swiper-pagination-bullet {
   }
   #intro {
     width: 100vw;
+    background-color: #f7f7f7;
   }
   #intro .container {
     width: 100%;
@@ -2907,6 +2908,9 @@ button.swiper-pagination-bullet {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-gap: .5rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   #intro .container .graphics > div img {
     width: 100%;
@@ -2919,32 +2923,43 @@ button.swiper-pagination-bullet {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
   }
   #intro .container .text h2 {
     margin-bottom: 1rem;
   }
+  #intro .container .text .line {
+    width: 150px;
+    height: 2px;
+    background-color: #c59c5f;
+    margin-bottom: 1rem;
+  }
   #intro .container .text p:nth-of-type(1) {
     margin-bottom: 1rem;
+    font-size: 0.875rem;
   }
   #intro .container .text p:nth-of-type(2) {
     color: #a9a9a9;
     margin-bottom: 1rem;
+    font-size: 0.875rem;
   }
   #intro .container .text a {
     margin: 0;
   }
   #master-barbers {
     width: 100%;
+    background-color: #f7f7f7;
   }
   #master-barbers .container {
     display: -webkit-box;
@@ -2963,6 +2978,7 @@ button.swiper-pagination-bullet {
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    padding-bottom: 2rem;
   }
   #master-barbers .container .heading {
     display: -webkit-box;
@@ -3049,6 +3065,8 @@ button.swiper-pagination-bullet {
   }
   #masonry-gallery {
     width: 100vw;
+    background: #f7f7f7;
+    padding-bottom: 2rem;
   }
   #masonry-gallery .container {
     margin: auto;
@@ -3088,19 +3106,18 @@ button.swiper-pagination-bullet {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    margin-bottom: 2rem;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: .2rem;
-    padding: 0 .2rem;
+    grid-gap: .5rem;
+    padding: 0 .5rem;
   }
   #masonry-gallery .container .masonry .col {
     display: -ms-grid;
     display: grid;
     place-items: start;
-    grid-gap: .2rem;
+    grid-gap: .5rem;
     width: 100%;
   }
   #masonry-gallery .container .masonry .col .item {
@@ -3368,6 +3385,76 @@ button.swiper-pagination-bullet {
     -webkit-transform-origin: center;
             transform-origin: center;
   }
+  #intro {
+    width: 100vw;
+  }
+  #intro .container {
+    width: 100%;
+    padding: 2rem 0.5rem;
+    max-width: 1200px;
+    display: -ms-grid;
+    display: grid;
+    margin: auto;
+    grid-gap: 1rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  #intro .container .graphics {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem;
+  }
+  #intro .container .graphics > div img {
+    width: 100%;
+    height: 100%;
+    height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #intro .container .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    padding: 0 1rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #intro .container .text h2 {
+    margin-bottom: 1rem;
+  }
+  #intro .container .text .line {
+    width: 150px;
+    height: 2px;
+    background-color: #c59c5f;
+    margin-bottom: 1rem;
+  }
+  #intro .container .text p:nth-of-type(1) {
+    margin-bottom: 1rem;
+  }
+  #intro .container .text p:nth-of-type(2) {
+    color: #a9a9a9;
+    margin-bottom: 1rem;
+  }
+  #intro .container .text a {
+    margin: 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -3414,6 +3501,73 @@ button.swiper-pagination-bullet {
   }
   .landing-section .landing-container .landing-grid .item img {
     display: none;
+  }
+  #intro {
+    width: 100vw;
+  }
+  #intro .container {
+    width: 100%;
+    padding: 2rem 0.5rem;
+    max-width: 1200px;
+    display: -ms-grid;
+    display: grid;
+    margin: auto;
+    grid-gap: 1rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  #intro .container .graphics {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem;
+  }
+  #intro .container .graphics > div img {
+    width: 100%;
+    height: 100%;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #intro .container .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    padding: 0 1rem;
+  }
+  #intro .container .text h2 {
+    margin-bottom: 1rem;
+  }
+  #intro .container .text .line {
+    width: 150px;
+    height: 2px;
+    background-color: #c59c5f;
+    margin-bottom: 1rem;
+  }
+  #intro .container .text p:nth-of-type(1) {
+    margin-bottom: 1rem;
+  }
+  #intro .container .text p:nth-of-type(2) {
+    color: #a9a9a9;
+    margin-bottom: 1rem;
+  }
+  #intro .container .text a {
+    margin: 0;
   }
   #masonry-gallery .container .masonry .col .item img:hover {
     opacity: .7;
@@ -4483,7 +4637,7 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 2rem 0.5rem;
   }
   #products .container .heading {
     display: -webkit-box;
@@ -4815,15 +4969,15 @@ input[type=number]::-webkit-outer-spin-button {
   display: grid;
   -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: .2rem;
-  padding: 0 .2rem;
+  grid-gap: .5rem;
+  padding: 0 .5rem;
 }
 
 #gallery .container .masonry .col {
   display: -ms-grid;
   display: grid;
   place-items: start;
-  grid-gap: .2rem;
+  grid-gap: .5rem;
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
