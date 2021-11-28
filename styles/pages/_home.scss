@@ -864,7 +864,7 @@
 @media (min-width: 0px) {
   #test {
     width: 100vw;
-    // background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(/images/man-barbershop-salon-doing-haircut-beard-trim.jpg) center / cover;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/images/img07.jpeg) center / cover;
 
     .container {
       width: 100%;
@@ -882,6 +882,7 @@
 
         h2 {
           margin-bottom: $margin-md;
+          color: white;
         }
 
         .line {
@@ -943,6 +944,9 @@
               text-align: center;
               line-height: 1.5;
               margin-bottom: 2em;
+              blockquote {
+                color: $text-color
+              }
 
               & blockquote::before {
                 content: '\201C';
@@ -971,10 +975,11 @@
               justify-content: center;
               align-items: center;
               flex-direction: column;
-
+              color: white;
               & img {
                 width: 4em;
                 border-radius: 50%;
+                display: none;
               }
             }
           }
@@ -998,7 +1003,7 @@
           justify-content: center;
           align-items: center;
           cursor: pointer;
-          background-color: white;
+          background-color: rgba(255, 255, 255, 0.1);
 
           &:hover {
             background-color: $primary;

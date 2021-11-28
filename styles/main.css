@@ -3656,6 +3656,8 @@ button.swiper-pagination-bullet {
 @media (min-width: 0px) {
   #test {
     width: 100vw;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(/images/img07.jpeg) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/img07.jpeg) center/cover;
   }
   #test .container {
     width: 100%;
@@ -3682,6 +3684,7 @@ button.swiper-pagination-bullet {
   }
   #test .container .heading h2 {
     margin-bottom: 1rem;
+    color: white;
   }
   #test .container .heading .line {
     width: 150px;
@@ -3765,6 +3768,9 @@ button.swiper-pagination-bullet {
     line-height: 1.5;
     margin-bottom: 2em;
   }
+  #test .container .test-swiper .swiper-slide .test .test-context blockquote {
+    color: #a9a9a9;
+  }
   #test .container .test-swiper .swiper-slide .test .test-context blockquote::before {
     content: '\201C';
   }
@@ -3802,10 +3808,12 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    color: white;
   }
   #test .container .test-swiper .swiper-slide .test .client-info img {
     width: 4em;
     border-radius: 50%;
+    display: none;
   }
   #test .container .controller {
     height: -webkit-max-content;
@@ -3838,7 +3846,7 @@ button.swiper-pagination-bullet {
         -ms-flex-align: center;
             align-items: center;
     cursor: pointer;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
   }
   #test .container .controller .item:hover {
     background-color: #d5b980;
