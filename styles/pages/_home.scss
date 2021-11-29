@@ -465,6 +465,115 @@
       }
     }
   }
+
+  #test {
+    width: 100vw;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/images/img07.jpeg) center / cover;
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: $padding-lg $padding-md;
+
+      .heading {
+        padding: 1em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h2 {
+          margin-bottom: $margin-md;
+          color: white;
+        }
+
+        .line {
+          width: 150px;
+          height: 2px;
+          background-color: $darker-primary;
+          margin-bottom: $margin-md;
+        }
+      }
+
+      .test {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: $margin-lg;
+        position: relative;
+        z-index: 2;
+
+        &::before {
+          content: '';
+          width: 130px;
+          height: 130px;
+          position: absolute;
+          background-image: url(/images/quotation-mark.svg);
+          background-position: center;
+          background-size: cover;
+          z-index: -1;
+          top: 30%;
+          left: 15%;
+          opacity: 5%;
+        }
+
+
+        .test-context {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          line-height: 1.5;
+          margin-bottom: $margin-md;
+
+          blockquote {
+            color: $text-color
+          }
+
+          & blockquote::before {
+            content: '\201C';
+          }
+
+          & blockquote::after {
+            content: '\201C';
+          }
+
+          .star-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: $margin-md;
+
+            img {
+              width: 2rem;
+              margin-right: .2rem;
+            }
+          }
+        }
+
+        .client-info {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          color: white;
+
+          & img {
+            width: 4em;
+            border-radius: 50%;
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -666,6 +775,17 @@
       }
     }
   }
+
+  #test {
+    .container {
+      .test-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
@@ -858,13 +978,25 @@
   }
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    #test {
+    .container {
+      padding: $padding-lg 0;
+      .test-grid {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+      }
+    }
+  }
+}
 
 /* Testemonials Section */
 @media (min-width: 0px) {
   #test {
     width: 100vw;
-    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/images/img07.jpeg) center / cover;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/images/img07.jpg) center / cover;
 
     .container {
       width: 100%;
@@ -893,271 +1025,78 @@
         }
       }
 
-      .test-swiper {
+      .test {
+        width: 100%;
         display: flex;
         justify-content: center;
-        align-self: center;
+        align-items: center;
         flex-direction: column;
-        width: 100%;
+        margin-bottom: $margin-lg;
+        position: relative;
+        z-index: 2;
 
-        .test-swiper-container {
-          width: 100%;
-          height: max-content;
+        &::before {
+          content: '';
+          width: 130px;
+          height: 130px;
+          position: absolute;
+          background-image: url(/images/quotation-mark.svg);
+          background-position: center;
+          background-size: cover;
+          z-index: -1;
+          top: 30%;
+          left: 15%;
+          opacity: 5%;
         }
 
-        .swiper-slide {
+
+        .test-context {
           width: 100%;
-          margin-bottom: $margin-lg;
-
-          .test {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: $padding-md;
-            // background-color: $gray-100;
-            position: relative;
-            z-index: 2;
-
-            &::before {
-              content: '';
-              width: 130px;
-              height: 130px;
-              position: absolute;
-              background-image: url(/images/quotation-mark.svg);
-              background-position: center;
-              background-size: cover;
-              z-index: -1;
-              top: 30%;
-              left: 15%;
-              opacity: 5%;
-            }
-
-
-            .test-context {
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: column;
-              text-align: center;
-              line-height: 1.5;
-              margin-bottom: 2em;
-              blockquote {
-                color: $text-color
-              }
-
-              & blockquote::before {
-                content: '\201C';
-              }
-
-              & blockquote::after {
-                content: '\201C';
-              }
-
-              .star-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: $margin-md;
-
-                img {
-                  width: 2rem;
-                  margin-right: .2rem;
-                }
-              }
-            }
-
-            .client-info {
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: column;
-              color: white;
-              & img {
-                width: 4em;
-                border-radius: 50%;
-                display: none;
-              }
-            }
-          }
-        }
-      }
-
-      .controller {
-        height: max-content;
-        width: max-content;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1rem;
-        margin: auto;
-        place-items: center;
-
-        .item {
-          padding: 5px 20px;
-          width: max-content;
-          height: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
-          cursor: pointer;
-          background-color: rgba(255, 255, 255, 0.1);
+          flex-direction: column;
+          text-align: center;
+          line-height: 1.5;
+          margin-bottom: $margin-md;
 
-          &:hover {
-            background-color: $primary;
-            transition: .3s ease-in-out;
+          blockquote {
+            color: $text-color
           }
 
-          img {
-            width: 1.5rem;
+          & blockquote::before {
+            content: '\201C';
           }
-        }
-      }
-    }
-  }
-}
 
-@media (min-width: 768px) {
-  .test-section {
+          & blockquote::after {
+            content: '\201C';
+          }
 
-    & .test-container {
-      width: 500px;
-      max-width: 1200px;
-      margin: auto;
-
-      & .test-heading {
-        padding: 1em;
-        width: 100%;
-        text-align: center;
-      }
-
-      & .test-swiper {
-        display: flex;
-        width: 100%;
-
-        & .swiper-slide {
-          width: 100%;
-
-          & .test {
-            width: 100%;
+          .star-container {
             display: flex;
-            justify-content: center;
             align-items: center;
-            flex-direction: column;
-            padding: 0 1em;
+            justify-content: center;
+            margin-bottom: $margin-md;
 
-
-            & .test-context {
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: column;
-              text-align: center;
-              line-height: 1.5;
-              margin-bottom: 2em;
-
-              & blockquote::before {
-                content: '\201C';
-              }
-
-              & blockquote::after {
-                content: '\201C';
-              }
-            }
-
-            & .client-info {
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: column;
+            img {
+              width: 2rem;
+              margin-right: .2rem;
             }
           }
         }
-      }
-    }
-  }
-}
 
-@media (min-width: 1024px) {
-  .test-section {
-
-    & .test-container {
-      width: 100%;
-      max-width: 1200px;
-      margin: auto;
-
-      &::before {
-        content: '';
-        width: 130px;
-        height: 130px;
-        position: absolute;
-        background-image: url(/images/quotation-mark.svg);
-        background-position: center;
-        background-size: cover;
-        z-index: -1;
-        top: 40%;
-        left: 55%;
-        opacity: 5%;
-      }
-
-
-      & .test-heading {
-        padding: 1em;
-        width: 100%;
-        text-align: center;
-      }
-
-      & .test-swiper {
-        display: flex;
-        width: 100%;
-
-        & .swiper-slide {
+        .client-info {
           width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          color: white;
 
-          & .test {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 0 1em;
-            height: 400px;
-
-
-            & .test-context {
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: column;
-              text-align: center;
-              line-height: 1.5;
-              margin-bottom: 2em;
-
-              & blockquote::before {
-                content: '\201C';
-              }
-
-              & blockquote::after {
-                content: '\201C';
-              }
-            }
-
-            & .client-info {
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: column;
-
-              & img {
-                width: 5em;
-              }
-            }
+          & img {
+            width: 4em;
+            border-radius: 50%;
+            display: none;
           }
         }
       }
