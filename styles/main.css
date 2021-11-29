@@ -2897,7 +2897,7 @@ button.swiper-pagination-bullet {
     display: -ms-grid;
     display: grid;
     margin: auto;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
   }
@@ -2949,12 +2949,10 @@ button.swiper-pagination-bullet {
   }
   #intro .container .text p:nth-of-type(1) {
     margin-bottom: 1rem;
-    font-size: 0.875rem;
   }
   #intro .container .text p:nth-of-type(2) {
     color: #a9a9a9;
     margin-bottom: 1rem;
-    font-size: 0.875rem;
   }
   #intro .container .text a {
     margin: 0;
