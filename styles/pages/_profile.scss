@@ -46,7 +46,7 @@
                 & .profile-btn {
                     font-size: 17px;
                     box-shadow: $box-shadow;
-                    padding: 5px 20px;
+                    padding: 10px 30px;
                     border-radius: 0;
                     color: white;
                     text-decoration: none;
@@ -81,7 +81,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding: $padding-lg $padding-md;
+            padding: $padding-lg $padding-sm;
 
             .heading {
                 display: flex;
@@ -303,7 +303,7 @@
             align-items: center;
             flex-direction: column;
             margin: auto;
-            padding: $padding-lg $padding-md;
+            padding: $padding-lg $padding-sm;
             max-width: 1200px;
 
             .heading {
@@ -425,27 +425,6 @@
             & :nth-child(3) {
                 display: inline-flex;
                 justify-content: flex-start;
-
-
-                & .profile-btn {
-                    font-size: 17px;
-                    padding: 5px 20px;
-                    border-radius: 0;
-                    color: white;
-                    text-decoration: none;
-                    width: 125px;
-                    font-weight: unset;
-                    margin: 0;
-                    margin-right: 10px;
-                    letter-spacing: unset;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    white-space: nowrap;
-                    background: var(--standard-gold);
-                    color: black;
-
-                }
             }
         }
     }
@@ -584,24 +563,6 @@
                 display: inline-flex;
                 justify-content: flex-start;
 
-                & .profile-btn {
-                    font-size: 17px;
-                    padding: 5px 20px;
-                    border-radius: 0;
-                    color: white;
-                    text-decoration: none;
-                    width: 125px;
-                    font-weight: unset;
-                    margin: 0;
-                    margin-right: 10px;
-                    letter-spacing: unset;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    white-space: nowrap;
-                    background: var(--standard-gold);
-                    color: black;
-                }
             }
         }
     }
@@ -655,25 +616,6 @@
             & :nth-child(3) {
                 display: inline-flex;
                 justify-content: flex-start;
-
-                & .profile-btn {
-                    font-size: 17px;
-                    padding: 5px 20px;
-                    border-radius: 0;
-                    color: white;
-                    text-decoration: none;
-                    width: 125px;
-                    font-weight: unset;
-                    margin: 0;
-                    margin-right: 10px;
-                    letter-spacing: unset;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    white-space: nowrap;
-                    background: var(--standard-gold);
-                    color: black;
-                }
             }
         }
     }

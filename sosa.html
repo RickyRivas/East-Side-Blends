@@ -392,6 +392,21 @@
         data-config-modal-style="side">
     </div>
     <script src="https://embed.acuityscheduling.com/embed/button/24177111.js" async></script>
+    <script>
+        // select all images in home gallery
+        const galleryModal = document.querySelector('.gallery-modal');
+        const galleryModalImg = document.querySelector('.gallery-modal img');
+        const closeGalBtn = document.querySelector('.close-gal-modal').addEventListener('click', () => {
+            galleryModal.style.display = 'none'
+        })
+        const galleryHomeImgs = document.querySelectorAll('#masonry-gallery .container .masonry .item img');
+        galleryHomeImgs.forEach(img => {
+            img.addEventListener('click', () => {
+                galleryModal.style.display = 'flex';
+                galleryModalImg.src = img.src;
+            })
+        });
+    </script>
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYsM7QN-PeL64XUtPxtF9n8Veg6AYi7k0&callback=initMap">
