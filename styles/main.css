@@ -2015,27 +2015,9 @@ button.swiper-pagination-bullet {
     padding-bottom: 1rem;
     width: 100vw;
   }
-  .page-header > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    font-size: 1.5em;
-  }
-  .page-header > div a {
-    color: white;
-    text-decoration: none;
-    font-weight: light;
-  }
-  .page-header > div a:hover {
-    color: var(--standard-gold);
-    cursor: pointer;
+  .page-header p {
+    font-size: 2.3rem;
+    text-align: center;
   }
 }
 
@@ -2045,9 +2027,6 @@ button.swiper-pagination-bullet {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0345.jpg) 50% 70%/cover;
     height: 17rem;
   }
-  .page-header > div {
-    font-size: 1.7em;
-  }
 }
 
 @media (min-width: 1000px) {
@@ -2055,9 +2034,6 @@ button.swiper-pagination-bullet {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/content/TFA_0345.jpg) 50% 60%/cover;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0345.jpg) 50% 60%/cover;
     height: 15rem;
-  }
-  .page-header > div {
-    font-size: 1.5em;
   }
 }
 
@@ -2552,11 +2528,12 @@ button.swiper-pagination-bullet {
   }
 }
 
+/** @format */
 @media (min-width: 0em) {
   #page-footer {
     width: 100vw;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/esbbarshot.jpg) center/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/esbbarshot.jpg) center/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/content/TFA_0278.jpg) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0278.jpg) center/cover;
   }
   #page-footer .container {
     width: 100%;
@@ -3853,10 +3830,10 @@ button.swiper-pagination-bullet {
     margin-bottom: 2rem;
   }
   #about .container .desc .flex img {
-    width: 1.5rem;
+    width: 2rem;
   }
   #about .container .desc .flex .line {
-    height: 1px;
+    height: 2px;
     width: 80%;
     background-color: #d5b980;
   }
