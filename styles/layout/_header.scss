@@ -1,3 +1,5 @@
+/** @format */
+
 @media (min-width: 0px) {
   body {
     overflow-x: hidden;
@@ -37,11 +39,11 @@
 
       .logo-box {
         position: absolute;
-        left: .8rem;
-        top: .8rem;
+        left: 0.8rem;
+        top: 0.8rem;
 
         img {
-          height: 4.5rem;
+          height: 7rem;
         }
 
         p {
@@ -71,7 +73,7 @@
 
         & li {
           opacity: 1;
-          padding: .5em 1em;
+          padding: 0.5em 1em;
           text-align: center;
           font-weight: unset;
           display: flex;
@@ -88,7 +90,7 @@
           }
 
           &::after {
-            content: '';
+            content: "";
             width: 100%;
             height: 2px;
             background-color: white;
@@ -99,7 +101,7 @@
 
           &:hover {
             &::after {
-              transition: transform .5s;
+              transition: transform 0.3s;
               transform: translate(0);
             }
           }
@@ -144,12 +146,12 @@
       width: 100vw;
       height: 100vh;
       transform: translateX(100%);
-      background: rgba(0, 0, 0, .4);
+      background: rgba(0, 0, 0, 0.7);
       z-index: 99;
 
       &.is-active {
         transform: translate(0%);
-        animation: fadeIn 0.5s ease-in;
+        animation: fadeIn 0.3s ease-in;
       }
     }
   }
@@ -246,7 +248,7 @@
 
         & li {
           opacity: 1;
-          padding: .5em;
+          padding: 0.5em;
           width: max-content;
           font-size: $font-size-sm;
         }
@@ -279,7 +281,8 @@
 
     & nav {
       .nav-links {
-        & li {}
+        & li {
+        }
       }
     }
   }
@@ -303,18 +306,18 @@
     width: 30px;
     height: 2px;
     position: absolute;
-    transition: all .5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &::before,
     &::after {
-      content: '';
-      content: '';
+      content: "";
+      content: "";
       left: 0;
       position: absolute;
       width: 100%;
       height: 100%;
       background: #fff;
-      transition: all .5s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     &:before {

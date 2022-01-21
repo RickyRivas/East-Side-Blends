@@ -11,10 +11,16 @@ const galleryModalImg = document.querySelector('.gallery-modal img');
 const closeGalBtn = document.querySelector('.close-gal-modal').addEventListener('click', () => {
   galleryModal.style.display = 'none'
 })
-const galleryHomeImgs = document.querySelectorAll('#masonry-gallery .container .masonry .item img');
-galleryHomeImgs.forEach(img => {
+const galleryHomeImgs = document.querySelectorAll('#masonry-gallery .container .masonry .item img')
+
+
+galleryHomeImgs.forEach((img) => {
   img.addEventListener('click', () => {
     galleryModal.style.display = 'flex';
     galleryModalImg.src = img.src;
+
   })
 });
+
+
+let arr = ['1', '2', '3'];
