@@ -640,11 +640,11 @@
 
 @media (min-width: 1024px) {
   #landing {
-    .container {
-      .swiper-container {
+    .swiper-container {
+      .swiper-wrapper {
         .swiper-1 {
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url(/images/content/TFA_0278.jpg) 50% 0% / cover;
+            url(/images/content/landscape0278.png) center / cover;
         }
 
         .swiper-2 {
@@ -661,42 +661,42 @@
           background-position: center;
         }
       }
+    }
 
-      .landing-grid {
-        position: absolute;
-        bottom: 0;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    .landing-grid {
+      position: absolute;
+      bottom: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      z-index: 10;
+
+      .item {
         width: 100%;
-        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        min-height: 150px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem;
 
-        .item {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          text-align: center;
-          min-height: 150px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          padding: 1rem;
+        h5 {
+          color: $primary;
+          font-size: $font-size-base * 0.9;
+          margin-bottom: $margin-md;
+          text-transform: uppercase;
+        }
 
-          h5 {
-            color: $primary;
-            font-size: $font-size-base * 0.9;
-            margin-bottom: $margin-md;
-            text-transform: uppercase;
-          }
+        p {
+          color: white;
+          display: block;
+          font-size: $font-size-base * 0.8;
+        }
 
-          p {
-            color: white;
-            display: block;
-            font-size: $font-size-base * 0.8;
-          }
-
-          img {
-            display: none;
-          }
+        img {
+          display: none;
         }
       }
     }

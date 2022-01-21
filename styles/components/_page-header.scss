@@ -1,88 +1,64 @@
+/** @format */
+
 @media (min-width: 0px) {
-    .page-header {
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-            url(/images/esbbarshot.jpg);
-        background-size: cover;
-        background-position: center 10%;
-        height: 20vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(/images/content/TFA_0345.jpg) 50% 65% / cover;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    padding-bottom: 1rem;
+    width: 100vw;
+
+    & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      font-size: 1.5em;
+
+      & a {
         color: white;
-        width: 100vw;
+        text-decoration: none;
+        font-weight: light;
 
-        &>div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            font-size: 1.1em;
-
-            & a {
-                color: white;
-                text-decoration: none;
-                font-weight: light;
-                &:hover {
-                    color: var(--standard-gold);
-                    cursor: pointer;
-                }
-            }
+        &:hover {
+          color: var(--standard-gold);
+          cursor: pointer;
         }
+      }
     }
+  }
 }
 
 @media (min-width: 768px) {
-    .page-header {
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-            url(/images/esbbarshot.jpg);
-        background-size: cover;
-        background-position: center 10%;
-        height: 204px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
+  .page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(/images/content/TFA_0345.jpg) 50% 70% / cover;
+    height: 17rem;
 
+    & > div {
+      font-size: 1.7em;
 
-        &>div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            font-size: 1.3em;
-
-            & a {
-                color: white;
-                text-decoration: none;
-            }
-        }
+      & a {
+      }
     }
+  }
 }
 
 @media (min-width: 1000px) {
-    .page-header {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url(/images/esbbarshot.jpg);
-        background-size: cover;
-        background-position: center 10%;
-        height: 341px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
+  .page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(/images/content/TFA_0345.jpg) 50% 60% / cover;
+    height: 15rem;
 
+    & > div {
+      font-size: 1.5em;
 
-        &>div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            font-size: 1.5em;
-
-            & a {
-                color: white;
-                text-decoration: none;
-            }
-        }
+      & a {
+      }
     }
+  }
 }
