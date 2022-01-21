@@ -376,13 +376,13 @@
             object-fit: cover;
             transition: 500ms;
 
-            &:hover {
-              transform: scale(1.05);
-              box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-              cursor: pointer;
-            }
+            // &:hover {
+            //   transform: scale(1.05);
+            //   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            //     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+            //     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            //   cursor: pointer;
+            // }
           }
         }
       }
@@ -456,7 +456,7 @@
   #test {
     width: 100vw;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(/images/img07.jpg) center / cover;
+      url(/images/content/TFA_0130.jpg) center / cover;
 
     .container {
       width: 100%;
@@ -773,8 +773,13 @@
     .container {
       .masonry {
         .col {
-          .item {
-            img {
+          img {
+            &:hover {
+              transform: scale(1.05);
+              box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+              cursor: pointer;
             }
           }
         }
@@ -849,6 +854,8 @@
 
 @media (min-width: 1200px) {
   #test {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(/images/content/landscape0278.png) center / cover;
     .container {
       padding: $padding-lg 0;
 
