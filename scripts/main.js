@@ -1,30 +1,33 @@
+/** @format */
+
 // Navigation 1
-const body = document.querySelector('body');
+const body = document.querySelector("body");
 const burger = document.querySelector(".hamburger");
-const navOverlay = document.querySelector('.navlinks-overlay');
+const navOverlay = document.querySelector(".navlinks-overlay");
 const nav = document.querySelector(".nav-links");
 
-burger.addEventListener('click', () => {
-    nav.classList.toggle('is-active');
-    burger.classList.toggle('is-active');
-    body.classList.toggle('body-fixed');
-    navOverlay.classList.toggle('is-active');
-})
-navOverlay.addEventListener('click', () => {
-    nav.classList.toggle('is-active');
-    burger.classList.toggle('is-active');
-    body.classList.toggle('body-fixed');
-    navOverlay.classList.toggle('is-active');
-})
+burger.addEventListener("click", () => {
+  nav.classList.toggle("is-active");
+  burger.classList.toggle("is-active");
+  body.classList.toggle("body-fixed");
+  navOverlay.classList.toggle("is-active");
+});
+navOverlay.addEventListener("click", () => {
+  nav.classList.toggle("is-active");
+  burger.classList.toggle("is-active");
+  body.classList.toggle("body-fixed");
+  navOverlay.classList.toggle("is-active");
+});
 // Landing Swiper
 var swiper = new Swiper(".mySwiper", {
   loop: true,
   spaceBetween: 0,
   effect: "fade",
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: true,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: true,
+  // },
+  autoplay: false,
   pagination: {
     el: ".swiper-pagination-landing",
     clickable: true,
@@ -32,10 +35,9 @@ var swiper = new Swiper(".mySwiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  }
-
-})
-// Test Swiper 
+  },
+});
+// Test Swiper
 var swiper = new Swiper(".myTestSwiper", {
   spaceBetween: 10,
   centeredSlides: true,
@@ -56,7 +58,7 @@ var swiper = new Swiper(".myTestSwiper", {
     1024: {
       slidesPerView: 3,
       spaceBetween: 20,
-    }
+    },
   },
   navigation: {
     nextEl: ".swiper-next",
@@ -70,7 +72,6 @@ var swiper = new Swiper(".myWorkSwiper", {
   freeMode: true,
   speed: 1500,
   autoplay: {
-
     delay: 2500,
     disableOnInteraction: false,
   },
@@ -90,7 +91,7 @@ var swiper = new Swiper(".myWorkSwiper", {
     1024: {
       slidesPerView: 3,
       spaceBetween: 20,
-    }
+    },
   },
 });
 // Home Gallery Swiper
@@ -100,7 +101,7 @@ var swiper = new Swiper(".gallery-swiper", {
   loop: true,
   breakpoints: {
     0: {
-      slidesPerView: 2
+      slidesPerView: 2,
     },
     768: {
       slidesPerView: 4,
@@ -109,13 +110,13 @@ var swiper = new Swiper(".gallery-swiper", {
     1024: {
       slidesPerView: 6,
       spaceBetween: 20,
-    }
+    },
   },
   navigation: {
     nextEl: ".swiper-next-gal",
     prevEl: ".swiper-prev-gal",
-  }
-})
+  },
+});
 // Scroll to top logic
 const scrollToTopButton = document.getElementById("js-top");
 
@@ -143,37 +144,36 @@ scrollToTopButton.onclick = function (e) {
   scrollToTop();
 };
 
-
 function initMap() {
-  map = new google.maps.Map(document.querySelector('#map'), {
+  map = new google.maps.Map(document.querySelector("#map"), {
     center: {
       lat: 36.130037207923735,
-      lng: -95.85173717672147
+      lng: -95.85173717672147,
     },
     zoom: 15,
-    mapId: '7794715a02b4f75c',
+    mapId: "7794715a02b4f75c",
     mapTypeControl: false,
     fullscreenControl: false,
     streetViewControl: false,
-    zoomControl: false
+    zoomControl: false,
   });
   const image = "/images/esblogo1.png";
-  const contentString = `East Side Blends Barbershop`
+  const contentString = `East Side Blends Barbershop`;
   const infowindow = new google.maps.InfoWindow({
     content: contentString,
   });
   const marker = new google.maps.Marker({
     position: {
       lat: 36.130037207923735,
-      lng: -95.85173717672147
+      lng: -95.85173717672147,
     },
     map,
     title: "East Side Blends",
     icon: {
       url: image,
-      scaledSize: new google.maps.Size(50, 50)
+      scaledSize: new google.maps.Size(50, 50),
     },
-    animation: google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP,
   });
   marker.addListener("click", () => {
     infowindow.open({
@@ -183,4 +183,3 @@ function initMap() {
     });
   });
 }
-

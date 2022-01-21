@@ -1,137 +1,122 @@
-/**
- * /* Main Container CSS
- *
- * @format
- */
+/** @format */
 
 @media all and (min-width: 0px) {
-  .landing-section {
+  #landing {
     width: 100vw;
-    height: 100vh;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
 
-    & .landing-container {
+    .swiper-container {
       height: 100%;
-      margin: auto;
-      position: relative;
+      width: 100vw;
+      position: absolute;
+      z-index: 1;
 
-      .swiper-container {
-        height: 100%;
+      .swiper-wrapper {
+        display: flex;
         width: 100%;
         position: relative;
+
+        .swiper-slide {
+          display: flex;
+        }
+
+        .swiper-1 {
+          background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url(/images/content/TFA_0285.jpg) center 10% / cover;
+        }
+
+        .swiper-2 {
+          background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url(/images/conttonbro-leatherbarberchair.jpg) center / cover;
+        }
+
+        .swiper-3 {
+          background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url(/images/louisse-lemuel-enad-Iz1d9ZeRJkI-unsplash.jpg) center /
+              cover;
+        }
+      }
+
+      .swiper-heading {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        text-align: center;
+        // margin-top: 100%;
 
-        & .swiper-wrapper {
-          display: flex;
-          position: relative;
-
-          & .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: $padding-lg;
-          }
-
-          .swiper-1 {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url(/images/content/TFA_0285.jpg);
-            background-position: center 10%;
-            background-size: cover;
-          }
-
-          .swiper-2 {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url(/images/conttonbro-leatherbarberchair.jpg);
-            background-position: center;
-            background-size: cover;
-          }
-
-          .swiper-3 {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url(/images/louisse-lemuel-enad-Iz1d9ZeRJkI-unsplash.jpg);
-            background-size: cover;
-            background-position: center;
-          }
+        h1 {
+          color: white;
+          margin-bottom: $margin-sm;
+          text-transform: uppercase;
         }
 
-        .swiper-slide-active {
-          .swiper-heading {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-
-            h1 {
-              color: white;
-              margin-bottom: $margin-sm;
-              opacity: 0;
-              animation: fadeDown 1s ease-in-out forwards;
-              animation-delay: 0.4s;
-              text-transform: uppercase;
-            }
-
-            p {
-              color: white;
-              margin-bottom: $margin-md;
-              opacity: 0;
-              animation: fadeDown 1s ease-in-out forwards;
-              animation-delay: 0.8s;
-            }
-
-            a {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: max-content;
-              opacity: 0;
-              animation: fadeDown 1s ease-in-out forwards;
-              animation-delay: 1.2s;
-              color: black;
-            }
-          }
+        p {
+          color: white;
+          margin-bottom: $margin-md;
         }
 
-        .swiper-heading {
-          width: 100%;
+        a {
           display: flex;
           justify-content: center;
           align-items: center;
-          flex-direction: column;
-          text-align: center;
-
-          h1 {
-            color: white;
-            margin-bottom: $margin-sm;
-            text-transform: uppercase;
-          }
-
-          p {
-            color: white;
-            margin-bottom: $margin-md;
-          }
-
-          a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: max-content;
-            color: black;
-          }
-        }
-
-        .swiper-pagination-landing {
-          z-index: 4;
-          position: absolute;
-          bottom: -0.5rem;
-          left: 50%;
           width: max-content;
-          transform: translate(-50%, -50%);
-          transform-origin: center;
+          color: black;
         }
+      }
+
+      // .swiper-slide-active {
+      //   .swiper-heading {
+      //     width: 100%;
+      //     display: flex;
+      //     justify-content: center;
+      //     align-items: center;
+      //     flex-direction: column;
+      //     text-align: center;
+
+      //     h1 {
+      //       color: white;
+      //       margin-bottom: $margin-sm;
+      //       opacity: 0;
+      //       animation: fadeDown 1s ease-in-out forwards;
+      //       animation-delay: 0.4s;
+      //       text-transform: uppercase;
+      //     }
+
+      //     p {
+      //       color: white;
+      //       margin-bottom: $margin-md;
+      //       opacity: 0;
+      //       animation: fadeDown 1s ease-in-out forwards;
+      //       animation-delay: 0.8s;
+      //     }
+
+      //     a {
+      //       display: flex;
+      //       justify-content: center;
+      //       align-items: center;
+      //       width: max-content;
+      //       opacity: 0;
+      //       animation: fadeDown 1s ease-in-out forwards;
+      //       animation-delay: 1.2s;
+      //       color: black;
+      //     }
+      //   }
+      // }
+
+      .swiper-pagination-landing {
+        z-index: 4;
+        position: absolute;
+        bottom: -0.5rem;
+        left: 50%;
+        width: max-content;
+        transform: translate(-50%, -50%);
+        transform-origin: center;
       }
     }
 
@@ -576,135 +561,6 @@
 }
 
 @media (min-width: 768px) {
-  .landing-section {
-    height: 40rem;
-
-    & .landing-container {
-      height: 100%;
-      margin: auto;
-
-      .swiper-container {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        & .swiper-wrapper {
-          display: flex;
-          position: relative;
-
-          & .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: $padding-lg;
-          }
-
-          .swiper-1 {
-          }
-
-          .swiper-2 {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url(/images/conttonbro-leatherbarberchair.jpg);
-            background-position: center;
-            background-size: cover;
-          }
-
-          .swiper-3 {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url(/images/louisse-lemuel-enad-Iz1d9ZeRJkI-unsplash.jpg);
-            background-size: cover;
-            background-position: center;
-          }
-        }
-
-        .swiper-slide-active {
-          .swiper-heading {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-
-            h1 {
-              color: white;
-              margin-bottom: $margin-sm;
-              opacity: 0;
-              animation: fadeDown 1s ease-in-out forwards;
-              animation-delay: 0.4s;
-              text-transform: uppercase;
-              font-size: 2rem;
-            }
-
-            p {
-              color: white;
-              margin-bottom: $margin-md;
-              opacity: 0;
-              animation: fadeDown 1s ease-in-out forwards;
-              animation-delay: 0.8s;
-              font-size: 1.5rem;
-            }
-
-            a {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: max-content;
-              opacity: 0;
-              animation: fadeDown 1s ease-in-out forwards;
-              animation-delay: 1.2s;
-              color: black;
-            }
-          }
-        }
-
-        .swiper-heading {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          text-align: center;
-
-          h1 {
-            color: white;
-            margin-bottom: $margin-sm;
-            text-transform: uppercase;
-            font-size: 2rem;
-          }
-
-          p {
-            color: white;
-            margin-bottom: $margin-md;
-            font-size: 1.5rem;
-          }
-
-          a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: max-content;
-            color: black;
-          }
-        }
-
-        .swiper-pagination-landing {
-          z-index: 4;
-          position: absolute;
-          bottom: -0.5rem;
-          left: 50%;
-          width: max-content;
-          transform: translate(-50%, -50%);
-          transform-origin: center;
-        }
-      }
-    }
-  }
-
   #intro {
     width: 100vw;
 
@@ -783,8 +639,8 @@
 }
 
 @media (min-width: 1024px) {
-  .landing-section {
-    .landing-container {
+  #landing {
+    .container {
       .swiper-container {
         .swiper-1 {
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -805,6 +661,7 @@
           background-position: center;
         }
       }
+
       .landing-grid {
         position: absolute;
         bottom: 0;
@@ -994,6 +851,7 @@
   #test {
     .container {
       padding: $padding-lg 0;
+
       .test-grid {
         display: grid;
         grid-template-rows: 1fr;
@@ -1002,6 +860,7 @@
       }
     }
   }
+
   #intro {
     width: 100vw;
 
