@@ -3737,6 +3737,111 @@ button.swiper-pagination-bullet {
   }
 }
 
+body {
+  position: relative;
+}
+
+.modal-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: opacityIn 100ms ease-in forwards;
+          animation: opacityIn 100ms ease-in forwards;
+}
+
+.modal-overlay .swiper-container {
+  width: 100%;
+}
+
+.modal-overlay .swiper-container .swiper-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-overlay .swiper-container .swiper-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-overlay .swiper-container .swiper-wrapper .swiper-slide img {
+  max-width: 80%;
+}
+
+.modal-overlay .close-swiper-modal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 1rem;
+  top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-overlay .close-swiper-modal > div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+}
+
+.modal-overlay .close-swiper-modal > div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal-overlay .close-swiper-modal > div::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.modal-overlay .swiper-pagination-modal {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: white;
+}
+
 /** @format */
 @media (min-width: 0em) {
   #about {

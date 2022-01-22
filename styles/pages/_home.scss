@@ -856,6 +856,7 @@
   #test {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url(/images/content/landscape0278.png) center / cover;
+
     .container {
       padding: $padding-lg 0;
 
@@ -1036,5 +1037,81 @@
 
   to {
     opacity: 1;
+  }
+}
+
+body {
+  position: relative;
+}
+
+.modal-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: opacityIn 100ms ease-in forwards;
+
+  .swiper-container {
+    width: 100%;
+    // height: 100%;
+
+    .swiper-wrapper {
+      // width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+  .close-swiper-modal {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > div {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        transform: rotate(45deg);
+      }
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .swiper-pagination-modal {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: white;
   }
 }
