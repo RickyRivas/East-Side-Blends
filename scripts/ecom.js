@@ -1,62 +1,154 @@
-// Modify input
-const itemQtyInput = document.querySelector('.qty-input');
-const checkoutBtn = document.querySelector('#cart-btn');
-itemQtyInput.addEventListener('change', () => {
-  checkoutBtn.setAttribute('data-item-quantity', itemQtyInput.value)
-})
-//modal 
-const prodModal = document.querySelector('.prod-modal');
-//products
-const allProducts = document.querySelectorAll('.product');
-allProducts.forEach(prod => {
-  prod.addEventListener('click', () => {
-    let modalImg, modalDesc, modalPrice, modalTitle, modalId, modalUrl, selectedUrl, selectedImg, selectedPrice, selectedDesc, selectedTitle, selectedId;
-    // grab selected product info 
-    //id
-    selectedId = prod.getAttribute('data-modal-id');
-    // img
-    selectedImg = prod.getAttribute('data-modal-img');
-    // desc
-    selectedDesc = prod.getAttribute('data-modal-desc');
-    // price
-    selectedPrice = prod.getAttribute('data-modal-price');
-    // title
-    selectedTitle = prod.getAttribute('data-modal-title');
-    //quantity
-    // url
-    selectedUrl = prod.getAttribute('data-modal-url');
+/** @format */
 
-    // grab modal elements 
-    modalImg = document.querySelector('.modal-img').src = selectedImg;
-    modalDesc = document.querySelector('.modal-desc').textContent = selectedDesc;
-    modalPrice = document.querySelector('.modal-price').textContent = '$' + selectedPrice;
-    modalTitle = document.querySelector('.modal-name').textContent = selectedTitle;
-    modalId = selectedId;
-    modalUrl = selectedUrl;
+const products = [
+  {
+    id: 1,
+    title: "ORIGINAL HOLD POMADE",
+    description: `Our awesome smelling water based pomades are made to keep your hair in place for the full day and into the night if need be. 
+      They apply effortlessly with their creamy consistency and provide a fierce grip for slickbacks, pompadours, side parts or any hairstyle you need.`,
+    price: 12.99,
+    url: "https://rwt1.netlify.app/scripts/products/products.json",
+    images: [
+      "images/suavecito-firme-clay-4oz_400x.jpg",
+      "images/suavecito-firme-clay-4oz_400x.jpg",
+    ],
+  },
+  {
+    id: 2,
+    title: "Suavecito Pomade Item 2",
+    description: `Our awesome smelling water based pomades are made to keep your hair in place for the full day and into the night if need be. 
+      They apply effortlessly with their creamy consistency and provide a fierce grip for slickbacks, pompadours, side parts or any hairstyle you need.`,
+    price: 10.99,
+    url: "https://rwt1.netlify.app/scripts/products/products.json",
+    images: [
+      "images/Suavecito_Matte_Pomade_Side_2048x.jpg",
+      "images/Suavecito_Matte_Pomade_Side_2048x.jpg",
+    ],
+  },
+  {
+    id: 3,
+    title: "Suavecito Pomade Item 3",
+    description: `Our awesome smelling water based pomades are made to keep your hair in place for the full day and into the night if need be. 
+      They apply effortlessly with their creamy consistency and provide a fierce grip for slickbacks, pompadours, side parts or any hairstyle you need.`,
+    price: 19.99,
+    url: "https://rwt1.netlify.app/scripts/products/products.json",
+    images: [
+      "images/suavecito-light-hold-pomade-angled_2048x.jpg",
+      "images/suavecito-light-hold-pomade-angled_2048x.jpg",
+    ],
+  },
+  {
+    id: 4,
+    title: "Suavecito Pomade Item 4",
+    description: `Our awesome smelling water based pomades are made to keep your hair in place for the full day and into the night if need be. 
+      They apply effortlessly with their creamy consistency and provide a fierce grip for slickbacks, pompadours, side parts or any hairstyle you need.`,
+    price: 13.99,
+    url: "https://rwt1.netlify.app/scripts/products/products.json",
+    images: [
+      "images/suavecito-petroleum-pomade-side_2048x.jpg",
+      "images/suavecito-petroleum-pomade-side_2048x.jpg",
+    ],
+  },
+];
 
-    // data item id
-    checkoutBtn.setAttribute('data-item-id', modalId);
-    //item price
-    checkoutBtn.setAttribute('data-item-price', selectedPrice);
-    //item url
-    checkoutBtn.setAttribute('data-item-url', modalUrl);
-    //item name
-    checkoutBtn.setAttribute('data-item-name', modalTitle);
-    // item desc
-    checkoutBtn.setAttribute('data-item-description', modalDesc);
-    // item img
-    checkoutBtn.setAttribute('data-item-image', modalImg)
-    // open modal
-    prodModal.style.display = 'flex';
-  })
-})
-//close modal 
-const closeModalBtn = document.querySelector('.close').addEventListener('click', () => {
-  prodModal.style.display = 'none';
-  itemQtyInput.value = '1';
-})
-// close modal after 'add to cart' is clicked
-checkoutBtn.addEventListener('click', () => {
-  prodModal.style.display = 'none';
-  itemQtyInput.value = '1';
-})
+let productsOutput = document.querySelector(".prods-grid");
+let prodsDom = "";
+products.forEach((product) => {
+  prodsDom += `
+  <div
+              id="#item1"
+              class="product"
+              data-id="${product.id}"
+              data-img="${product.images[0]}"
+              data-desc="${product.description}"
+              data-url="${product.url}"
+              data-price="${product.price}"
+              data-title="${product.title}"
+            >
+              <div class="product-image">
+                <img alt="img" src="${product.images[0]}" />
+              </div>
+              <div class="product-body">
+                <h4 class="item-name">${product.title}</h4>
+                <p class="price">${product.price} USD</p>
+              </div>
+            </div>
+  `;
+});
+productsOutput.innerHTML = prodsDom;
+// create product modal
+const allDomProducts = document.querySelectorAll(".product");
+allDomProducts.forEach((product) => {
+  product.addEventListener("click", () => {
+    const selectedProd = products.find((prod) => prod.id == product.dataset.id);
+    renderModal(selectedProd);
+  });
+});
+
+function renderModal(product) {
+  let body = document.querySelector("body");
+  // create modal
+  const modalEl = document.createElement("div");
+  modalEl.className = "prod-modal";
+  modalEl.innerHTML = `
+            <div class="product-displayed">
+                <span class="close">
+                    <div></div>
+                </span>
+                <div class="product-image">
+                    <img alt="img" src="${product.images[0]}" class="modal-img" />
+                </div>
+                <div class="product-body">
+                      <p class="modal-name">${product.title}</p>
+                      <p class="modal-desc">${product.description}</p>
+                      <p class="modal-price">$${product.price} USD</p>
+                  <div class='item-qty'>
+                    <button id='plus-qty' class='qty-btn'>+</button>
+                    <input type="number" value='1' min='1' max='99' value='1' class="qty-input">
+                    <button id='minus-qty' class='qty-btn'>-</button>
+                    </div>
+                  <button
+                    id="cart-btn"
+                    class="snipcart-add-item"
+                    data-item-id="${product.id}"
+                    data-item-price="${product.price}"
+                    data-item-url="${product.url}"
+                    data-item-description="${product.description}"
+                    data-item-quantity="1"
+                    data-item-image="${product.images[0]}"
+                    data-item-name="${product.title}"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+            </div>
+  `;
+  body.append(modalEl);
+  document.querySelector(".close").addEventListener("click", () => {
+    body.removeChild(modalEl);
+  });
+  const modalAddToCartBtn = document.querySelector("#cart-btn");
+  // set
+  const setQtyAttr = () => {
+    modalAddToCartBtn.setAttribute("data-item-quantity", qtyInput.value);
+  };
+
+  // qty input logic
+  let qtyInput = document.querySelector(".qty-input");
+  qtyInput.addEventListener("change", () => {
+    setQtyAttr();
+  });
+  let addQtyBtn = document.querySelector("#plus-qty");
+  addQtyBtn.addEventListener("click", () => {
+    qtyInput.value++;
+    setQtyAttr();
+  });
+  let remQtyBtn = document.querySelector("#minus-qty");
+  remQtyBtn.addEventListener("click", () => {
+    qtyInput.value--;
+    if (qtyInput.value <= 1) {
+      qtyInput.value = 1;
+    }
+    setQtyAttr();
+  });
+}
