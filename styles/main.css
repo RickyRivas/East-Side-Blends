@@ -2883,7 +2883,7 @@ button.swiper-pagination-bullet {
     display: grid;
     -ms-grid-rows: auto 1fr;
         grid-template-rows: auto 1fr;
-    width: 90%;
+    width: 100%;
     max-width: 450px;
     height: 100%;
     -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
