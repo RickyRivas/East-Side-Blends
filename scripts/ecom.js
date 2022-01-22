@@ -30,7 +30,7 @@ const products = [
     title: "Suavecito Pomade Item 3",
     description: `Our awesome smelling water based pomades are made to keep your hair in place for the full day and into the night if need be. 
       They apply effortlessly with their creamy consistency and provide a fierce grip for slickbacks, pompadours, side parts or any hairstyle you need.`,
-    price: 19.99,
+    price: 9.99,
     url: "https://rwt1.netlify.app/scripts/products/products.json",
     images: [
       "images/suavecito-light-hold-pomade-angled_2048x.jpg",
@@ -42,7 +42,7 @@ const products = [
     title: "Suavecito Pomade Item 4",
     description: `Our awesome smelling water based pomades are made to keep your hair in place for the full day and into the night if need be. 
       They apply effortlessly with their creamy consistency and provide a fierce grip for slickbacks, pompadours, side parts or any hairstyle you need.`,
-    price: 13.99,
+    price: 12.99,
     url: "https://rwt1.netlify.app/scripts/products/products.json",
     images: [
       "images/suavecito-petroleum-pomade-side_2048x.jpg",
@@ -96,7 +96,17 @@ function renderModal(product) {
                     <div></div>
                 </span>
                 <div class="product-image">
-                    <img alt="img" src="${product.images[0]}" class="modal-img" />
+                  <div class='swiper-container prodModalSwiper'>
+                    <div class='swiper-wrapper'>
+                      <div class='swiper-slide'>
+                        <img alt="img" src="${product.images[0]}" class="modal-img" />
+                      </div>
+                      <div class='swiper-slide'>
+                        <img alt="img" src="${product.images[1]}" class="modal-img" />
+                      </div>
+                    </div>
+                  </div>
+                   <div class="swiper-pagination-prod"></div>
                 </div>
                 <div class="product-body">
                       <p class="modal-name">${product.title}</p>
@@ -151,4 +161,22 @@ function renderModal(product) {
     }
     setQtyAttr();
   });
+
+  // modal swiper
+  function returnProdSwiper() {
+    const modalSwiper = new Swiper(".prodModalSwiper", {
+      // should be a number
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination-prod",
+      },
+    });
+  }
+
+  return returnProdSwiper();
 }

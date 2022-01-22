@@ -1,8 +1,4 @@
-/**
- * /* Products Section
- *
- * @format
- */
+/** @format */
 
 @media (min-width: 0px) {
   body {
@@ -166,15 +162,35 @@
       z-index: 19;
       position: relative;
       padding: $padding-md 0;
+      overflow: hidden;
 
       .product-image {
-        height: 200px;
         padding: $padding-sm;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-        img {
-          max-width: 100%;
-          height: 100%;
-          object-fit: cover;
+        .swiper-container {
+          width: 100%;
+
+          .swiper-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .swiper-slide {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              img {
+                width: 80%;
+              }
+            }
+          }
         }
       }
 
@@ -246,6 +262,7 @@
             }
           }
         }
+
         button {
           margin: 0;
           width: 100%;
@@ -326,14 +343,41 @@
       padding: $padding-md 0;
 
       .product-image {
-        // height: 200px;
-        height: 80%;
         padding: $padding-sm;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        // display: none;
 
-        img {
-          max-width: 100%;
-          height: 100%;
-          object-fit: cover;
+        .swiper-container {
+          width: 100%;
+          display: flex;
+
+          .swiper-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .swiper-slide {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              img {
+                width: 80%;
+              }
+            }
+          }
+        }
+        .swiper-pagination-prod {
+          position: absolute;
+          bottom: 0;
         }
       }
 
@@ -405,6 +449,7 @@
             }
           }
         }
+
         button {
           margin: 0;
           width: 100%;
