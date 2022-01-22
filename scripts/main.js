@@ -6,18 +6,15 @@ const burger = document.querySelector(".hamburger");
 const navOverlay = document.querySelector(".navlinks-overlay");
 const nav = document.querySelector(".nav-links");
 
-burger.addEventListener("click", () => {
+const toggleEverything = () => {
   nav.classList.toggle("is-active");
   burger.classList.toggle("is-active");
   body.classList.toggle("body-fixed");
   navOverlay.classList.toggle("is-active");
-});
-navOverlay.addEventListener("click", () => {
-  nav.classList.toggle("is-active");
-  burger.classList.toggle("is-active");
-  body.classList.toggle("body-fixed");
-  navOverlay.classList.toggle("is-active");
-});
+};
+
+burger.addEventListener("click", toggleEverything);
+navOverlay.addEventListener("click", toggleEverything);
 // Landing Swiper
 var swiper = new Swiper(".mySwiper", {
   loop: true,
