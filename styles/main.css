@@ -2079,8 +2079,8 @@ button.swiper-pagination-bullet {
 /** @format */
 @media (min-width: 0px) {
   .page-header {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/content/TFA_0345.jpg) 50% 65%/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0345.jpg) 50% 65%/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/content/TFA_0149.jpg) 50% 65%/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0149.jpg) 50% 65%/cover;
     height: 12rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2103,16 +2103,16 @@ button.swiper-pagination-bullet {
 
 @media (min-width: 768px) {
   .page-header {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/content/TFA_0345.jpg) 50% 70%/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0345.jpg) 50% 70%/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/content/TFA_0149.jpg) 50% 70%/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0149.jpg) 50% 70%/cover;
     height: 17rem;
   }
 }
 
 @media (min-width: 1000px) {
   .page-header {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/content/TFA_0345.jpg) 50% 60%/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0345.jpg) 50% 60%/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/content/TFA_0149.jpg) 50% 40%/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0149.jpg) 50% 40%/cover;
     height: 15rem;
   }
 }
