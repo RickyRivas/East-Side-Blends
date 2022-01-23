@@ -2659,7 +2659,6 @@ button.swiper-pagination-bullet {
   }
   #page-footer .container .content p {
     line-height: 1.5;
-    color: #a9a9a9;
     margin-bottom: 1rem;
     font-size: 0.875rem;
   }
@@ -2690,38 +2689,39 @@ button.swiper-pagination-bullet {
         -ms-flex-align: start;
             align-items: flex-start;
     position: relative;
+    overflow: hidden;
   }
-  #landing .swiper-container {
+  #landing .mySwiper {
     height: 100%;
     width: 100vw;
     position: absolute;
     z-index: 1;
   }
-  #landing .swiper-container .swiper-wrapper {
+  #landing .mySwiper .swiper-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
     position: relative;
   }
-  #landing .swiper-container .swiper-wrapper .swiper-slide {
+  #landing .mySwiper .swiper-wrapper .swiper-slide {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  #landing .swiper-container .swiper-wrapper .swiper-1 {
+  #landing .mySwiper .swiper-wrapper .swiper-1 {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/TFA_0285.jpg) center 10%/cover;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/TFA_0285.jpg) center 10%/cover;
   }
-  #landing .swiper-container .swiper-wrapper .swiper-2 {
+  #landing .mySwiper .swiper-wrapper .swiper-2 {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/gimg3wide.jpg) center/cover;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/gimg3wide.jpg) center/cover;
   }
-  #landing .swiper-container .swiper-wrapper .swiper-3 {
+  #landing .mySwiper .swiper-wrapper .swiper-3 {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/TFA_0413.jpg) center/cover;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/TFA_0413.jpg) center/cover;
   }
-  #landing .swiper-container .swiper-pagination-landing {
+  #landing .mySwiper .swiper-pagination-landing {
     z-index: 4;
     position: absolute;
     bottom: -0.5rem;

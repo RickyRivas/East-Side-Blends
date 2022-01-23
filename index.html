@@ -90,11 +90,11 @@
           </div>
         </div>
       </div>
-        <div class='swiper-heading'>
-              <h1>East Side Blends</h1>
-              <p>Cut Different.</p>
-              <a class='btn btn-primary' href='book.html'>Book An Appointment</a>
-            </div>
+      <div class='swiper-heading'>
+        <h1>East Side Blends</h1>
+        <p>Cut Different.</p>
+        <a class='btn btn-primary' href='book.html'>Book An Appointment</a>
+      </div>
       <div class='landing-grid'>
         <div class='item item-1'>
           <h5>Directions</h5>
@@ -324,8 +324,7 @@
           </div>
           <div class="col">
             <img alt="img" src="images/content/TFA_0388.jpg" alt='Overview of shop from the front door' />
-            <img alt="img" src="images/IMG_7480.jpeg"
-              alt='haircut' />
+            <img alt="img" src="images/IMG_7480.jpeg" alt='haircut' />
             <img alt="img" src="images/content/TFA_0153.jpg" alt='pool table with rack set up' />
             <img alt="img" src="images/IMG_7666.jpeg" alt='pool table located at east side blends' />
           </div>
@@ -401,6 +400,21 @@
   <!-- Main Container End -->
   <!-- Scripts -->
   <script src="scripts/swiper-bundle.min.js"></script>
+  <script>
+    // Landing Swiper
+    function renderLandingSwiper() {
+      return new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        }
+      });
+    }
+    renderLandingSwiper();
+  </script>
   <script src="scripts/main.js"></script>
   <script src="scripts/home.js"></script>
   <script src='scripts/barber.js'></script>
