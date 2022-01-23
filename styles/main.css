@@ -495,6 +495,9 @@ html {
   footer .container .col p {
     color: #a9a9a9;
   }
+  footer .container .col p:hover {
+    color: white;
+  }
   footer .container .col h2 {
     margin-bottom: 1rem;
     font-weight: lighter;
@@ -522,6 +525,9 @@ html {
     color: #a9a9a9;
     text-decoration: none;
   }
+  footer .container .col ul a:hover {
+    color: white;
+  }
   footer .container .col .icon {
     width: 1rem;
     height: 1rem;
@@ -530,6 +536,9 @@ html {
   }
   footer .container .col .footer-logo {
     max-width: 50%;
+  }
+  footer .container .logo-col p:hover {
+    color: #a9a9a9;
   }
   footer .site-credit {
     width: 100%;
