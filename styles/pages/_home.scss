@@ -165,7 +165,6 @@
 
   #intro {
     width: 100vw;
-    background-color: $white-smoke;
 
     .container {
       width: 100%;
@@ -213,15 +212,9 @@
           margin-bottom: $margin-md;
         }
 
-        p:nth-of-type(1) {
+        p {
           margin-bottom: $margin-md;
         }
-
-        p:nth-of-type(2) {
-          color: $text-color;
-          margin-bottom: $margin-md;
-        }
-
         a {
           margin: 0;
         }
@@ -231,7 +224,6 @@
 
   #master-barbers {
     width: 100%;
-    background-color: $white-smoke;
 
     .container {
       display: flex;
@@ -363,7 +355,6 @@
 
   #masonry-gallery {
     width: 100vw;
-    background: $white-smoke;
     padding-bottom: $padding-lg;
 
     .container {
@@ -563,7 +554,7 @@
           margin-bottom: $margin-md;
 
           blockquote {
-            color: $text-color;
+            color: white;
           }
 
           & blockquote::before {
@@ -581,7 +572,7 @@
             margin-bottom: $margin-md;
 
             img {
-              width: 2rem;
+              width: 1.5rem;
               margin-right: 0.2rem;
             }
           }
@@ -647,37 +638,7 @@
       }
 
       .text {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-        text-align: left;
-        padding: 0 $padding-md;
         order: 2;
-
-        h2 {
-          margin-bottom: $margin-md;
-        }
-
-        .line {
-          width: 150px;
-          height: 2px;
-          background-color: $darker-primary;
-          margin-bottom: $margin-md;
-        }
-
-        p:nth-of-type(1) {
-          margin-bottom: $margin-md;
-        }
-
-        p:nth-of-type(2) {
-          color: $text-color;
-          margin-bottom: $margin-md;
-        }
-
-        a {
-          margin: 0;
-        }
       }
     }
   }
@@ -882,7 +843,6 @@
           }
         }
       }
-
       .text {
         display: flex;
         justify-content: flex-start;
@@ -890,27 +850,12 @@
         flex-direction: column;
         text-align: left;
         padding: 0 $padding-md;
-
-        h2 {
-          margin-bottom: $margin-md;
-        }
-
         .line {
           width: 150px;
           height: 2px;
           background-color: $darker-primary;
           margin-bottom: $margin-md;
         }
-
-        p:nth-of-type(1) {
-          margin-bottom: $margin-md;
-        }
-
-        p:nth-of-type(2) {
-          color: $text-color;
-          margin-bottom: $margin-md;
-        }
-
         a {
           margin: 0;
         }
@@ -1108,7 +1053,7 @@
       .test-grid {
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 1rem;
       }
     }
@@ -1142,39 +1087,6 @@
           }
         }
       }
-
-      .text {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-        text-align: left;
-        padding: 0 $padding-md;
-
-        h2 {
-          margin-bottom: $margin-md;
-        }
-
-        .line {
-          width: 150px;
-          height: 2px;
-          background-color: $darker-primary;
-          margin-bottom: $margin-md;
-        }
-
-        p:nth-of-type(1) {
-          margin-bottom: $margin-md;
-        }
-
-        p:nth-of-type(2) {
-          color: $text-color;
-          margin-bottom: $margin-md;
-        }
-
-        a {
-          margin: 0;
-        }
-      }
     }
   }
 }
@@ -1204,7 +1116,6 @@
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 20;
   animation: fadeInUp 0.2s ease-in;
-  display: none;
   padding: $padding-md;
 
   .table {

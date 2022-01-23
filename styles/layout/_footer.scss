@@ -1,3 +1,5 @@
+/** @format */
+
 @media (min-width: 0em) {
   footer {
     width: 100vw;
@@ -16,24 +18,23 @@
       place-items: center;
       color: white;
       width: 100%;
-      max-width: 1200px;
       grid-gap: 1rem;
       margin: auto;
       margin-bottom: $margin-md;
 
       .col {
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         height: max-content;
         // text-align: center;
         padding: 0 $padding-md;
         font-weight: lighter;
         width: 100%;
+        text-align: center;
         p {
-           color: $text-color;
-           font-size: 14px;
+          color: $text-color;
         }
         h2 {
           margin-bottom: $margin-md;
@@ -48,27 +49,23 @@
             margin-bottom: $margin-sm;
             color: $text-color;
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
           }
           a {
             color: $text-color;
             text-decoration: none;
-            font-size: 14px;
           }
         }
-        img {
+
+        .icon {
           width: 1rem;
           height: 1rem;
-          margin-right: .5rem;
-          opacity: 60%;
+          margin-right: 0.5rem;
+          opacity: 70%;
         }
-        .business-hours {
-          li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          }
+        .footer-logo {
+          max-width: 50%;
         }
       }
     }
@@ -99,12 +96,73 @@
     }
   }
 }
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
   footer {
     padding-top: $padding-lg;
-     font-size: $font-size-sm;
+    font-size: $font-size-sm;
     .container {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      max-width: 1100px;
+      grid-template-columns: 2fr 1fr 1fr auto;
+      .col {
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        // text-align: center;
+        padding: 0 $padding-md;
+        font-weight: lighter;
+        width: 100%;
+        text-align: left;
+        p {
+          color: $text-color;
+        }
+        h2 {
+          margin-bottom: $margin-md;
+          font-weight: lighter;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: $primary;
+        }
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: $margin-sm;
+            color: $text-color;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+          a {
+            color: $text-color;
+            text-decoration: none;
+          }
+        }
+
+        .icon {
+          width: 1rem;
+          height: 1rem;
+          margin-right: 0.5rem;
+          opacity: 60%;
+        }
+        .footer-logo {
+          max-width: 60%;
+        }
+      }
+      .logo-col {
+        padding: 0;
+      }
+      .book-col {
+        height: 100%;
+        white-space: nowrap;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: unset;
+        a {
+          margin: 0;
+        }
+      }
     }
   }
 }
