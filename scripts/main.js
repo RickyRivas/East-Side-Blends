@@ -19,18 +19,8 @@ navOverlay.addEventListener("click", toggleEverything);
 var swiper = new Swiper(".mySwiper", {
   loop: true,
   spaceBetween: 0,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true,
-  },
-  pagination: {
-    el: ".swiper-pagination-landing",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  autoplay: true,
+  effect: "fade",
 });
 // Test Swiper
 var swiper = new Swiper(".myTestSwiper", {
