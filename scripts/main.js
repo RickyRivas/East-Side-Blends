@@ -17,9 +17,14 @@ burger.addEventListener("click", toggleEverything);
 navOverlay.addEventListener("click", toggleEverything);
 // Landing Swiper
 var swiper = new Swiper(".mySwiper", {
-  loop: true,
   spaceBetween: 0,
-  autoplay: true,
+  speed: 1000,
+  loop: true,
+  autoplay: 3000,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
   effect: "fade",
 });
 // Test Swiper

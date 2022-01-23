@@ -137,7 +137,11 @@ function renderModal(product) {
   document.querySelector(".close").addEventListener("click", () => {
     body.removeChild(modalEl);
   });
-  const modalAddToCartBtn = document.querySelector("#cart-btn");
+  const modalAddToCartBtn = document
+    .querySelector("#cart-btn")
+    .addEventListener("click", () => {
+      body.removeChild(modalEl);
+    });
   // set
   const setQtyAttr = () => {
     modalAddToCartBtn.setAttribute("data-item-quantity", qtyInput.value);
