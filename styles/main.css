@@ -2690,12 +2690,14 @@ button.swiper-pagination-bullet {
             align-items: flex-start;
     position: relative;
     overflow: hidden;
+    background-color: black;
   }
   #landing .mySwiper {
     height: 100%;
     width: 100vw;
     position: absolute;
     z-index: 1;
+    -webkit-backface-visibility: hidden;
   }
   #landing .mySwiper .swiper-wrapper {
     display: -webkit-box;
@@ -2703,6 +2705,7 @@ button.swiper-pagination-bullet {
     display: flex;
     width: 100%;
     position: relative;
+    -webkit-backface-visibility: hidden;
   }
   #landing .mySwiper .swiper-wrapper .swiper-slide {
     display: -webkit-box;
