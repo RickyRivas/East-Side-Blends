@@ -31,42 +31,12 @@
 
         .swiper-2 {
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url(/images/conttonbro-leatherbarberchair.jpg) center / cover;
+            url(/images/content/gimg3wide.jpg) center / cover;
         }
 
         .swiper-3 {
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url(/images/louisse-lemuel-enad-Iz1d9ZeRJkI-unsplash.jpg) center /
-              cover;
-        }
-      }
-
-      .swiper-heading {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        // margin-top: 100%;
-
-        h1 {
-          color: white;
-          margin-bottom: $margin-sm;
-          text-transform: uppercase;
-        }
-
-        p {
-          color: white;
-          margin-bottom: $margin-md;
-        }
-
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: max-content;
-          color: black;
+            url(/images/content/TFA_0413.jpg) center / cover;
         }
       }
 
@@ -117,6 +87,41 @@
         width: max-content;
         transform: translate(-50%, -50%);
         transform-origin: center;
+      }
+    }
+
+    .swiper-heading {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      z-index: 20;
+      // display: none;
+      // margin-top: 100%;
+
+      h1 {
+        color: white;
+        margin-bottom: $margin-sm;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: white;
+        margin-bottom: $margin-md;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        color: black;
       }
     }
 
@@ -215,6 +220,7 @@
         p {
           margin-bottom: $margin-md;
         }
+
         a {
           margin: 0;
         }
@@ -596,6 +602,7 @@
     }
   }
 }
+
 @media (min-width: 600px) {
   #master-barbers {
     .container {
@@ -607,6 +614,7 @@
     }
   }
 }
+
 @media (min-width: 768px) {
   #intro {
     width: 100vw;
@@ -653,6 +661,7 @@
       }
     }
   }
+
   #master-barbers {
     .container {
       margin: auto;
@@ -757,19 +766,19 @@
       .swiper-wrapper {
         .swiper-1 {
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url(/images/content/landscape0278.png) center / cover;
+            url(/images/content/TFA_0149hd.jpg) center / cover;
         }
 
         .swiper-2 {
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url(/images/conttonbro-leatherbarberchair.jpg);
+            url(/images/content/gimg3wide.jpg);
           background-position: center;
           background-size: cover;
         }
 
         .swiper-3 {
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url(/images/louisse-lemuel-enad-Iz1d9ZeRJkI-unsplash.jpg);
+            url(/images/content/0413landscape.png);
           background-size: cover;
           background-position: center;
         }
@@ -843,6 +852,7 @@
           }
         }
       }
+
       .text {
         display: flex;
         justify-content: flex-start;
@@ -850,18 +860,21 @@
         flex-direction: column;
         text-align: left;
         padding: 0 $padding-md;
+
         .line {
           width: 150px;
           height: 2px;
           background-color: $darker-primary;
           margin-bottom: $margin-md;
         }
+
         a {
           margin: 0;
         }
       }
     }
   }
+
   #master-barbers {
     .container {
       margin: auto;
@@ -959,6 +972,7 @@
       }
     }
   }
+
   #masonry-gallery {
     .container {
       .masonry {

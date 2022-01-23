@@ -378,7 +378,7 @@ html {
 /* burger css */
 .hamburger {
   position: relative;
-  width: 30px;
+  width: 40px;
   height: 30px;
   cursor: pointer;
   z-index: inherit;
@@ -397,7 +397,7 @@ html {
 }
 
 .hamburger .hamburger-inner {
-  width: 30px;
+  width: 40px;
   height: 2px;
   position: absolute;
   -webkit-transition: all 0.3s ease-in-out;
@@ -2714,14 +2714,27 @@ button.swiper-pagination-bullet {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/TFA_0285.jpg) center 10%/cover;
   }
   #landing .swiper-container .swiper-wrapper .swiper-2 {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/conttonbro-leatherbarberchair.jpg) center/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/conttonbro-leatherbarberchair.jpg) center/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/gimg3wide.jpg) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/gimg3wide.jpg) center/cover;
   }
   #landing .swiper-container .swiper-wrapper .swiper-3 {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/louisse-lemuel-enad-Iz1d9ZeRJkI-unsplash.jpg) center/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/louisse-lemuel-enad-Iz1d9ZeRJkI-unsplash.jpg) center/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/TFA_0413.jpg) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/TFA_0413.jpg) center/cover;
   }
-  #landing .swiper-container .swiper-heading {
+  #landing .swiper-container .swiper-pagination-landing {
+    z-index: 4;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  #landing .swiper-heading {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2737,17 +2750,23 @@ button.swiper-pagination-bullet {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 20;
   }
-  #landing .swiper-container .swiper-heading h1 {
+  #landing .swiper-heading h1 {
     color: white;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
   }
-  #landing .swiper-container .swiper-heading p {
+  #landing .swiper-heading p {
     color: white;
     margin-bottom: 1rem;
   }
-  #landing .swiper-container .swiper-heading a {
+  #landing .swiper-heading a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2761,19 +2780,6 @@ button.swiper-pagination-bullet {
     width: -moz-max-content;
     width: max-content;
     color: black;
-  }
-  #landing .swiper-container .swiper-pagination-landing {
-    z-index: 4;
-    position: absolute;
-    bottom: -0.5rem;
-    left: 50%;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-transform-origin: center;
-            transform-origin: center;
   }
   #landing .landing-grid {
     position: absolute;
@@ -3485,18 +3491,18 @@ button.swiper-pagination-bullet {
 
 @media (min-width: 1024px) {
   #landing .swiper-container .swiper-wrapper .swiper-1 {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/landscape0278.png) center/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/landscape0278.png) center/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/TFA_0149hd.jpg) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/TFA_0149hd.jpg) center/cover;
   }
   #landing .swiper-container .swiper-wrapper .swiper-2 {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/conttonbro-leatherbarberchair.jpg);
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/conttonbro-leatherbarberchair.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/gimg3wide.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/gimg3wide.jpg);
     background-position: center;
     background-size: cover;
   }
   #landing .swiper-container .swiper-wrapper .swiper-3 {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/louisse-lemuel-enad-Iz1d9ZeRJkI-unsplash.jpg);
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/louisse-lemuel-enad-Iz1d9ZeRJkI-unsplash.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/0413landscape.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/0413landscape.png);
     background-size: cover;
     background-position: center;
   }

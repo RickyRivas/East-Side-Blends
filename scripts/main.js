@@ -19,12 +19,10 @@ navOverlay.addEventListener("click", toggleEverything);
 var swiper = new Swiper(".mySwiper", {
   loop: true,
   spaceBetween: 0,
-  effect: "fade",
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: true,
-  // },
-  autoplay: false,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
   pagination: {
     el: ".swiper-pagination-landing",
     clickable: true,
