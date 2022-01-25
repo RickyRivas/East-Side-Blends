@@ -224,6 +224,7 @@
             margin-bottom: $margin-md;
           }
         }
+
         .stats {
           display: none;
         }
@@ -415,9 +416,14 @@
   #masonry-gallery {
     width: 100vw;
     padding-bottom: $padding-lg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .container {
       margin: auto;
+      width: 100%;
 
       .heading {
         display: flex;
@@ -447,7 +453,7 @@
 
       .masonry {
         width: 100%;
-        max-width: 1200px;
+        max-width: 1400px;
         margin: auto;
         margin-bottom: $margin-lg;
         display: grid;
@@ -970,6 +976,7 @@
             margin-bottom: $margin-md;
           }
         }
+
         .stats {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -982,17 +989,20 @@
           background-color: white;
           width: 130%;
           border-radius: 0.5rem;
+
           .item {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             padding: $padding-md;
+
             h5 {
               font-size: $font-size-base * 3;
               line-height: 1;
               margin-bottom: 0.5rem;
             }
+
             p {
               margin: 0;
               white-space: nowrap;
