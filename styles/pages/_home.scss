@@ -190,7 +190,43 @@
       }
     }
   }
-
+  #mission {
+    width: 100vw;
+    background-color: #f9f9f9;
+    .container {
+      display: grid;
+      grid-template-rows: auto auto;
+      place-items: center;
+      padding: $padding-lg $padding-sm;
+      grid-gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      .graphic {
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        span {
+          color: $primary;
+          margin-bottom: $margin-md;
+        }
+        h2 {
+          margin-bottom: $margin-md;
+          font-size: $font-size-base * 2;
+          text-transform: uppercase;
+        }
+        p {
+          line-height: 1.8;
+        }
+      }
+    }
+  }
   #master-barbers {
     width: 100%;
 
@@ -549,7 +585,40 @@
       }
     }
   }
-
+  #mission {
+    width: 100vw;
+    .container {
+      display: grid;
+      grid-template-rows: auto auto;
+      place-items: center;
+      padding: $padding-lg $padding-sm;
+      grid-gap: 2rem;
+      .graphic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 80%;
+        }
+      }
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 70%;
+        span {
+          color: $primary;
+        }
+        h2 {
+          margin-bottom: $margin-md;
+        }
+        p {
+        }
+      }
+    }
+  }
   #test {
     .container {
       .test-grid {
@@ -728,7 +797,7 @@
 
     .container {
       width: 100%;
-      padding: $padding-lg 0.5rem;
+      padding: $padding-xl 0.5rem;
       max-width: 1200px;
       display: grid;
       margin: auto;
@@ -773,7 +842,43 @@
       }
     }
   }
-
+  #mission {
+    width: 100vw;
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      place-items: center;
+      padding: $padding-xl $padding-sm;
+      grid-gap: 2rem;
+      .graphic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        order: 2;
+        span {
+          color: $primary;
+        }
+        h2 {
+          margin-bottom: $margin-md;
+        }
+        p {
+          max-width: 450px;
+        }
+      }
+    }
+  }
   #master-barbers {
     .container {
       margin: auto;
@@ -782,8 +887,7 @@
       .barber-grid {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 1rem;
         padding: unset;
         place-items: center;
@@ -792,12 +896,13 @@
           display: grid;
           grid-template-rows: auto 1fr;
           width: 100%;
+          max-width: 375px;
           height: 100%;
           box-shadow: $box-shadow;
 
           .head {
             width: 100%;
-            height: 13rem;
+            height: 15rem;
             position: relative;
             background-position: center;
 
@@ -816,7 +921,7 @@
               color: black;
               padding: 3px 16px;
               border-radius: 2rem;
-              font-size: $font-size-sm;
+              font-size: $font-size-sm * 0.8;
             }
           }
 
