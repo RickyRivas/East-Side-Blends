@@ -29,6 +29,7 @@ html {
 }
 
 /** @format */
+/** @format */
 @media (min-width: 0px) {
   body {
     overflow-x: hidden;
@@ -493,7 +494,7 @@ html {
     text-align: center;
   }
   footer .container .col p {
-    color: #a9a9a9;
+    color: #c9c9c9;
   }
   footer .container .col p:hover {
     color: white;
@@ -510,7 +511,7 @@ html {
   }
   footer .container .col ul li {
     margin-bottom: 0.5rem;
-    color: #a9a9a9;
+    color: #222;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -522,7 +523,7 @@ html {
             align-items: center;
   }
   footer .container .col ul a {
-    color: #a9a9a9;
+    color: #c9c9c9;
     text-decoration: none;
   }
   footer .container .col ul a:hover {
@@ -538,7 +539,7 @@ html {
     max-width: 50%;
   }
   footer .container .logo-col p:hover {
-    color: #a9a9a9;
+    color: #c9c9c9;
   }
   footer .site-credit {
     width: 100%;
@@ -565,7 +566,7 @@ html {
   }
   footer .site-credit p {
     text-transform: uppercase;
-    color: #a9a9a9;
+    color: #c9c9c9;
     font-size: 14px;
   }
   footer .site-credit a {
@@ -604,9 +605,6 @@ html {
     width: 100%;
     text-align: left;
   }
-  footer .container .col p {
-    color: #a9a9a9;
-  }
   footer .container .col h2 {
     margin-bottom: 1rem;
     font-weight: lighter;
@@ -619,7 +617,6 @@ html {
   }
   footer .container .col ul li {
     margin-bottom: 0.5rem;
-    color: #a9a9a9;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -631,7 +628,6 @@ html {
             align-items: flex-start;
   }
   footer .container .col ul a {
-    color: #a9a9a9;
     text-decoration: none;
   }
   footer .container .col .icon {
@@ -2003,7 +1999,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 1rem;
   }
   #home-gallery .container .heading p {
-    color: #a9a9a9;
+    color: #222;
   }
   #home-gallery .container .gallery-swiper {
     width: 100%;
@@ -2109,10 +2105,11 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .page-header {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/content/TFA_0149.jpg) 50% 10%/cover;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0149.jpg) 50% 10%/cover;
+    background-attachment: fixed;
     height: 15rem;
   }
 }
@@ -2528,7 +2525,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 1rem;
   }
   .barber-grid .grid-item .overlay p {
-    color: #a9a9a9;
+    color: #222;
     font-size: 0.8rem;
     margin-bottom: 1rem;
   }
@@ -2671,6 +2668,12 @@ button.swiper-pagination-bullet {
   }
   #page-footer .container .content > div img {
     width: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #page-footer {
+    background-attachment: fixed;
   }
 }
 
@@ -3038,7 +3041,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 1rem;
   }
   #master-barbers .container .heading p {
-    color: #a9a9a9;
+    color: #222;
   }
   #master-barbers .container .barber-grid {
     width: 100%;
@@ -3220,7 +3223,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 1rem;
   }
   #masonry-gallery .container .heading p {
-    color: #a9a9a9;
+    color: #222;
   }
   #masonry-gallery .container .masonry {
     width: 100%;
@@ -3229,8 +3232,8 @@ button.swiper-pagination-bullet {
     margin-bottom: 2rem;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     grid-gap: 0.5rem;
     padding: 0 0.5rem;
   }
@@ -3449,7 +3452,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 1rem;
   }
   #intro .container .graphic {
-    width: 60%;
+    width: 50%;
     margin: auto;
     position: relative;
   }
@@ -3988,6 +3991,10 @@ button.swiper-pagination-bullet {
   #master-barbers .container .barber-grid .item .item-body a {
     margin: 0;
   }
+  #masonry-gallery .container .masonry {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
   #masonry-gallery .container .masonry .col img:hover {
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
@@ -4073,6 +4080,7 @@ button.swiper-pagination-bullet {
   #test {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/images/content/TFA_0169.jpg) center/cover;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/content/TFA_0169.jpg) center/cover;
+    background-attachment: fixed;
   }
   #test .container {
     padding: 2rem 0;
@@ -4368,6 +4376,7 @@ body {
   #about {
     width: 100vw;
     position: relative;
+    background-color: #f9f9f9;
   }
   #about .container {
     width: 100%;
@@ -4776,7 +4785,7 @@ body {
     margin-bottom: 1rem;
   }
   #services .container .heading p {
-    color: #a9a9a9;
+    color: #222;
   }
   #services .container .grid {
     display: -ms-grid;
@@ -4847,7 +4856,7 @@ body {
     margin-bottom: 1rem;
     font-size: 0.875rem;
     text-align: center;
-    color: #a4a4a4;
+    color: #222;
   }
   #services .container .grid .item .item-body .dur {
     display: -webkit-box;
@@ -4902,6 +4911,21 @@ body {
   }
   #services .container .grid .item .item-body .body-btm .price span {
     color: #c59c5f;
+  }
+  #services a {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #services .container .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    place-items: center;
+    width: 100%;
   }
   #services a {
     margin-bottom: 2rem;
@@ -5017,7 +5041,7 @@ body {
     margin-bottom: 1rem;
   }
   #products .container .heading p {
-    color: #a9a9a9;
+    color: #222;
   }
   #products .container .prods-grid {
     display: -ms-grid;
@@ -5712,7 +5736,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 1rem;
   }
   #profile-services .container .heading p {
-    color: #a9a9a9;
+    color: #222;
   }
   #profile-services .container .services-grid {
     display: -ms-grid;
@@ -5825,7 +5849,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 1rem;
   }
   #profile-gallery .heading p {
-    color: #a9a9a9;
+    color: #222;
   }
   #profile-gallery .container {
     width: 100%;
@@ -5985,7 +6009,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 1rem;
   }
   #profile-info .container .heading p {
-    color: #a9a9a9;
+    color: #222;
   }
   #profile-info .container .profile-info {
     display: -ms-grid;
@@ -6156,7 +6180,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 1rem;
   }
   #profile-info .container .heading p {
-    color: #a9a9a9;
+    color: #222;
   }
   #profile-info .container .profile-info {
     display: -ms-grid;

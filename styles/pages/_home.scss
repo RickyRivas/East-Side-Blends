@@ -478,7 +478,7 @@
         margin: auto;
         margin-bottom: $margin-lg;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: 1fr 1fr;
         grid-gap: 0.5rem;
         padding: 0 0.5rem;
 
@@ -677,7 +677,7 @@
   #intro {
     .container {
       .graphic {
-        width: 60%;
+        width: 50%;
         margin: auto;
         position: relative;
 
@@ -1180,6 +1180,7 @@
   #masonry-gallery {
     .container {
       .masonry {
+        grid-template-columns: repeat(4, 1fr);
         .col {
           img {
             &:hover {
@@ -1264,6 +1265,7 @@
   #test {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url(/images/content/TFA_0169.jpg) center / cover;
+    background-attachment: fixed;
 
     .container {
       padding: $padding-lg 0;

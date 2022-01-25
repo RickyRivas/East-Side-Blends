@@ -35,7 +35,7 @@
         text-align: center;
 
         p {
-          color: $text-color;
+          color: #c9c9c9;
 
           &:hover {
             color: white;
@@ -62,7 +62,7 @@
           }
 
           a {
-            color: $text-color;
+            color: #c9c9c9;
             text-decoration: none;
 
             &:hover {
@@ -86,7 +86,7 @@
       .logo-col {
         p {
           &:hover {
-            color: $text-color;
+            color: #c9c9c9;
           }
         }
       }
@@ -109,7 +109,7 @@
 
       p {
         text-transform: uppercase;
-        color: $text-color;
+        color: #c9c9c9;
         font-size: 14px;
       }
 
@@ -142,9 +142,9 @@
         width: 100%;
         text-align: left;
 
-        p {
-          color: $text-color;
-        }
+        // p {
+        //   color: $text-color;
+        // }
 
         h2 {
           margin-bottom: $margin-md;
@@ -159,14 +159,12 @@
 
           li {
             margin-bottom: $margin-sm;
-            color: $text-color;
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
           }
 
           a {
-            color: $text-color;
             text-decoration: none;
           }
         }
