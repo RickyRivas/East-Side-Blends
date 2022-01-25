@@ -413,6 +413,27 @@
     }
   }
 
+  #suave-prods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 3rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(/images/suavecitopomade.jpg) center / cover;
+    text-align: center;
+
+    h2 {
+      color: white;
+      margin-bottom: $margin-sm;
+    }
+
+    p {
+      color: white;
+      margin-bottom: $margin-sm;
+    }
+  }
+
   #masonry-gallery {
     width: 100vw;
     padding-bottom: $padding-lg;
@@ -1254,6 +1275,13 @@
         grid-gap: 1rem;
       }
     }
+  }
+
+  #suave-prods {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(/images/suavecitopomade.jpg) center / fixed;
+    background-attachment: fixed;
+    text-align: center;
   }
 }
 
