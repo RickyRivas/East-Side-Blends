@@ -2833,37 +2833,45 @@ button.swiper-pagination-bullet {
   }
   #intro {
     width: 100vw;
+    background-color: #f9f9f9;
   }
   #intro .container {
     width: 100%;
-    padding: 2rem 0.5rem;
+    padding: 4rem 0.5rem;
     max-width: 1200px;
     display: -ms-grid;
     display: grid;
     margin: auto;
     grid-gap: 2rem;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
   }
-  #intro .container .graphics {
-    width: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+  #intro .container .graphic {
+    width: 90%;
+    margin: auto;
+    margin-left: 0.5rem;
+    position: relative;
   }
-  #intro .container .graphics > div img {
+  #intro .container .graphic > div {
+    z-index: 2;
+    position: relative;
+  }
+  #intro .container .graphic > div img {
     width: 100%;
-    height: 100%;
-    height: 350px;
     -o-object-fit: cover;
        object-fit: cover;
     -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  #intro .container .graphic::before {
+    background-color: #c59c5f;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1rem;
+    z-index: 1;
+    left: 1rem;
   }
   #intro .container .text {
     display: -webkit-box;
@@ -2885,6 +2893,10 @@ button.swiper-pagination-bullet {
   #intro .container .text h2 {
     margin-bottom: 1rem;
   }
+  #intro .container .text h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
   #intro .container .text .line {
     width: 150px;
     height: 2px;
@@ -2893,9 +2905,37 @@ button.swiper-pagination-bullet {
   }
   #intro .container .text p {
     margin-bottom: 1rem;
+    line-height: 1.7;
   }
   #intro .container .text a {
     margin: 0;
+  }
+  #intro .container .text .intro-test {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-left: 4px solid #d5b980;
+    padding: 1rem;
+    text-align: left;
+    display: none;
+  }
+  #intro .container .text .intro-test h4 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  #intro .container .text .stats {
+    display: none;
   }
   #mission {
     width: 100vw;
@@ -2942,6 +2982,11 @@ button.swiper-pagination-bullet {
   }
   #mission .container .text p {
     line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  #mission .container .text img {
+    opacity: 30%;
+    width: 5rem;
   }
   #master-barbers {
     width: 100%;
@@ -3313,42 +3358,6 @@ button.swiper-pagination-bullet {
 }
 
 @media (min-width: 768px) {
-  #intro {
-    width: 100vw;
-  }
-  #intro .container {
-    width: 100%;
-    padding: 2rem 0.5rem;
-    max-width: 1200px;
-    display: -ms-grid;
-    display: grid;
-    margin: auto;
-    grid-gap: 1rem;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-  }
-  #intro .container .graphics {
-    width: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
-  }
-  #intro .container .graphics > div img {
-    width: 100%;
-    height: 100%;
-    height: 350px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  #intro .container .text {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
   #mission {
     width: 100vw;
   }
@@ -3397,6 +3406,69 @@ button.swiper-pagination-bullet {
   }
   #mission .container .text h2 {
     margin-bottom: 1rem;
+  }
+  #intro .container .graphic {
+    width: 60%;
+    margin: auto;
+    position: relative;
+  }
+  #intro .container .graphic > div {
+    z-index: 2;
+    position: relative;
+  }
+  #intro .container .graphic > div img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  #intro .container .graphic::before {
+    background-color: #c59c5f;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1rem;
+    z-index: 1;
+    left: 1rem;
+  }
+  #intro .container .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  #intro .container .text h2 {
+    margin-bottom: 1rem;
+  }
+  #intro .container .text h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  #intro .container .text .line {
+    width: 150px;
+    height: 2px;
+    background-color: #c59c5f;
+    margin-bottom: 1rem;
+  }
+  #intro .container .text p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+  #intro .container .text a {
+    margin: 0;
   }
   #test .container .test-grid {
     display: -ms-grid;
@@ -3576,36 +3648,39 @@ button.swiper-pagination-bullet {
   #landing .landing-grid .item img {
     display: none;
   }
-  #intro {
-    width: 100vw;
-  }
   #intro .container {
-    width: 100%;
-    padding: 4rem 0.5rem;
-    max-width: 1200px;
-    display: -ms-grid;
-    display: grid;
-    margin: auto;
-    grid-gap: 0rem;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
+    grid-gap: 0;
+    padding-bottom: 8rem;
   }
-  #intro .container .graphics {
-    width: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
+  #intro .container .graphic {
+    width: 80%;
+    margin: auto;
+    position: relative;
   }
-  #intro .container .graphics > div img {
+  #intro .container .graphic > div {
+    z-index: 2;
+    position: relative;
+  }
+  #intro .container .graphic > div img {
     width: 100%;
-    height: 100%;
-    height: 450px;
     -o-object-fit: cover;
        object-fit: cover;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  #intro .container .graphic::before {
+    background-color: #c59c5f;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1rem;
+    z-index: 1;
+    left: 1rem;
   }
   #intro .container .text {
     display: -webkit-box;
@@ -3623,6 +3698,14 @@ button.swiper-pagination-bullet {
             flex-direction: column;
     text-align: left;
     padding: 0 1rem;
+    position: relative;
+  }
+  #intro .container .text h2 {
+    margin-bottom: 1rem;
+  }
+  #intro .container .text h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
   }
   #intro .container .text .line {
     width: 150px;
@@ -3630,8 +3713,76 @@ button.swiper-pagination-bullet {
     background-color: #c59c5f;
     margin-bottom: 1rem;
   }
+  #intro .container .text p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
   #intro .container .text a {
     margin: 0;
+  }
+  #intro .container .text .intro-test {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-left: 4px solid #d5b980;
+    padding: 1rem;
+    text-align: left;
+  }
+  #intro .container .text .intro-test h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  #intro .container .text .stats {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 2rem 2rem;
+    grid-gap: 2rem;
+    position: absolute;
+    bottom: -4rem;
+    z-index: 5;
+    background-color: white;
+    width: 130%;
+    border-radius: 0.5rem;
+  }
+  #intro .container .text .stats .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+  }
+  #intro .container .text .stats .item h5 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  #intro .container .text .stats .item p {
+    margin: 0;
+    white-space: nowrap;
   }
   #mission {
     width: 100vw;
@@ -3893,37 +4044,6 @@ button.swiper-pagination-bullet {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
-  }
-  #intro {
-    width: 100vw;
-  }
-  #intro .container {
-    width: 100%;
-    padding: 2rem 0.5rem;
-    max-width: 1200px;
-    display: -ms-grid;
-    display: grid;
-    margin: auto;
-    grid-gap: 1rem;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-  }
-  #intro .container .graphics {
-    width: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
-  }
-  #intro .container .graphics > div img {
-    width: 100%;
-    height: 100%;
-    height: 450px;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 

@@ -23,6 +23,7 @@
         width: 100%;
         position: relative;
         -webkit-backface-visibility: hidden;
+
         .swiper-slide {
           display: flex;
         }
@@ -88,6 +89,7 @@
         color: black;
       }
     }
+
     .landing-grid {
       position: absolute;
       bottom: 0;
@@ -133,31 +135,43 @@
 
   #intro {
     width: 100vw;
+    background-color: #f9f9f9;
 
     .container {
       width: 100%;
-      padding: $padding-lg 0.5rem;
+      padding: $padding-xl 0.5rem;
       max-width: 1200px;
       display: grid;
       margin: auto;
       grid-gap: 2rem;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: auto auto;
 
-      .graphics {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0.5rem;
-        order: 2;
+      .graphic {
+        width: 90%;
+        margin: auto;
+        margin-left: 0.5rem;
+        position: relative;
 
         & > div {
+          z-index: 2;
+          position: relative;
+
           img {
             width: 100%;
-            height: 100%;
-            height: 350px;
             object-fit: cover;
             box-shadow: $box-shadow;
           }
+        }
+
+        &::before {
+          background-color: $darker-primary;
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 1rem;
+          z-index: 1;
+          left: 1rem;
         }
       }
 
@@ -173,6 +187,11 @@
           margin-bottom: $margin-md;
         }
 
+        h3 {
+          font-size: $font-size-base * 2;
+          margin-bottom: $margin-md;
+        }
+
         .line {
           width: 150px;
           height: 2px;
@@ -182,17 +201,40 @@
 
         p {
           margin-bottom: $margin-md;
+          line-height: 1.7;
         }
 
         a {
           margin: 0;
         }
+
+        .intro-test {
+          width: 100%;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          border-left: 4px solid $primary;
+          padding: $padding-md;
+          text-align: left;
+          display: none;
+
+          h4 {
+            font-size: $font-size-base * 1.7;
+            margin-bottom: $margin-md;
+          }
+        }
+        .stats {
+          display: none;
+        }
       }
     }
   }
+
   #mission {
     width: 100vw;
     background-color: #f9f9f9;
+
     .container {
       display: grid;
       grid-template-rows: auto auto;
@@ -201,32 +243,44 @@
       grid-gap: 2rem;
       max-width: 1200px;
       margin: auto;
+
       .graphic {
         img {
           width: 100%;
         }
       }
+
       .text {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         text-align: center;
+
         span {
           color: $primary;
           margin-bottom: $margin-md;
         }
+
         h2 {
           margin-bottom: $margin-md;
           font-size: $font-size-base * 2;
           text-transform: uppercase;
         }
+
         p {
           line-height: 1.8;
+          margin-bottom: $margin-lg;
+        }
+
+        img {
+          opacity: 30%;
+          width: 5rem;
         }
       }
     }
   }
+
   #master-barbers {
     width: 100%;
 
@@ -551,56 +605,26 @@
 }
 
 @media (min-width: 768px) {
-  #intro {
-    width: 100vw;
-
-    .container {
-      width: 100%;
-      padding: $padding-lg 0.5rem;
-      max-width: 1200px;
-      display: grid;
-      margin: auto;
-      grid-gap: 1rem;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-
-      .graphics {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0.5rem;
-
-        & > div {
-          img {
-            width: 100%;
-            height: 100%;
-            height: 350px;
-            object-fit: cover;
-          }
-        }
-      }
-
-      .text {
-        order: 2;
-      }
-    }
-  }
   #mission {
     width: 100vw;
+
     .container {
       display: grid;
       grid-template-rows: auto auto;
       place-items: center;
       padding: $padding-lg $padding-sm;
       grid-gap: 2rem;
+
       .graphic {
         display: flex;
         justify-content: center;
         align-items: center;
+
         img {
           width: 80%;
         }
       }
+
       .text {
         display: flex;
         justify-content: center;
@@ -608,17 +632,87 @@
         flex-direction: column;
         text-align: center;
         width: 70%;
+
         span {
           color: $primary;
         }
+
         h2 {
           margin-bottom: $margin-md;
         }
+
         p {
         }
       }
     }
   }
+
+  #intro {
+    .container {
+      .graphic {
+        width: 60%;
+        margin: auto;
+        position: relative;
+
+        & > div {
+          z-index: 2;
+          position: relative;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+            box-shadow: $box-shadow;
+          }
+        }
+
+        &::before {
+          background-color: $darker-primary;
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 1rem;
+          z-index: 1;
+          left: 1rem;
+        }
+      }
+
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 $padding-md;
+
+        h2 {
+          margin-bottom: $margin-md;
+        }
+
+        h3 {
+          font-size: $font-size-base * 2;
+          margin-bottom: $margin-md;
+        }
+
+        .line {
+          width: 150px;
+          height: 2px;
+          background-color: $darker-primary;
+          margin-bottom: $margin-md;
+        }
+
+        p {
+          margin-bottom: $margin-md;
+          line-height: 1.7;
+        }
+
+        a {
+          margin: 0;
+        }
+      }
+    }
+  }
+
   #test {
     .container {
       .test-grid {
@@ -793,31 +887,37 @@
   }
 
   #intro {
-    width: 100vw;
-
     .container {
-      width: 100%;
-      padding: $padding-xl 0.5rem;
-      max-width: 1200px;
-      display: grid;
-      margin: auto;
-      grid-gap: 0rem;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
+      grid-gap: 0;
+      padding-bottom: $padding-xl * 2;
 
-      .graphics {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0.5rem;
+      .graphic {
+        width: 80%;
+        margin: auto;
+        position: relative;
 
         & > div {
+          z-index: 2;
+          position: relative;
+
           img {
             width: 100%;
-            height: 100%;
-            height: 450px;
             object-fit: cover;
+            box-shadow: $box-shadow;
           }
+        }
+
+        &::before {
+          background-color: $darker-primary;
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 1rem;
+          z-index: 1;
+          left: 1rem;
         }
       }
 
@@ -828,6 +928,16 @@
         flex-direction: column;
         text-align: left;
         padding: 0 $padding-md;
+        position: relative;
+
+        h2 {
+          margin-bottom: $margin-md;
+        }
+
+        h3 {
+          font-size: $font-size-base * 2.2;
+          margin-bottom: $margin-md;
+        }
 
         .line {
           width: 150px;
@@ -836,14 +946,66 @@
           margin-bottom: $margin-md;
         }
 
+        p {
+          margin-bottom: $margin-md;
+          line-height: 1.7;
+        }
+
         a {
           margin: 0;
+        }
+
+        .intro-test {
+          width: 100%;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          border-left: 4px solid $primary;
+          padding: $padding-md;
+          text-align: left;
+
+          h4 {
+            font-size: $font-size-base;
+            margin-bottom: $margin-md;
+          }
+        }
+        .stats {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          box-shadow: $box-shadow;
+          padding: $padding-lg $padding-lg;
+          grid-gap: 2rem;
+          position: absolute;
+          bottom: -4rem;
+          z-index: 5;
+          background-color: white;
+          width: 130%;
+          border-radius: 0.5rem;
+          .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: $padding-md;
+            h5 {
+              font-size: $font-size-base * 3;
+              line-height: 1;
+              margin-bottom: 0.5rem;
+            }
+            p {
+              margin: 0;
+              white-space: nowrap;
+            }
+          }
         }
       }
     }
   }
+
   #mission {
     width: 100vw;
+
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -851,14 +1013,17 @@
       place-items: center;
       padding: $padding-xl $padding-sm;
       grid-gap: 2rem;
+
       .graphic {
         display: flex;
         justify-content: center;
         align-items: center;
+
         img {
           width: 100%;
         }
       }
+
       .text {
         display: flex;
         justify-content: center;
@@ -867,18 +1032,22 @@
         text-align: center;
         width: 100%;
         order: 2;
+
         span {
           color: $primary;
         }
+
         h2 {
           margin-bottom: $margin-md;
         }
+
         p {
           max-width: 450px;
         }
       }
     }
   }
+
   #master-barbers {
     .container {
       margin: auto;
@@ -1073,37 +1242,6 @@
         grid-template-rows: 1fr;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1rem;
-      }
-    }
-  }
-
-  #intro {
-    width: 100vw;
-
-    .container {
-      width: 100%;
-      padding: $padding-lg 0.5rem;
-      max-width: 1200px;
-      display: grid;
-      margin: auto;
-      grid-gap: 1rem;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-
-      .graphics {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0.5rem;
-
-        & > div {
-          img {
-            width: 100%;
-            height: 100%;
-            height: 450px;
-            object-fit: cover;
-          }
-        }
       }
     }
   }
