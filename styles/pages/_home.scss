@@ -145,11 +145,10 @@
       margin: auto;
       grid-gap: 2rem;
       grid-template-rows: auto auto;
+      place-items: center;
 
       .graphic {
-        width: 90%;
-        margin: auto;
-        margin-left: 0.5rem;
+        width: 75%;
         position: relative;
 
         & > div {
@@ -676,6 +675,7 @@
 
   #intro {
     .container {
+      place-items: unset;
       .graphic {
         width: 50%;
         margin: auto;
@@ -1002,7 +1002,7 @@
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           box-shadow: $box-shadow;
-          padding: $padding-lg $padding-lg;
+          padding: $padding-md $padding-lg;
           grid-gap: 2rem;
           position: absolute;
           bottom: -4rem;

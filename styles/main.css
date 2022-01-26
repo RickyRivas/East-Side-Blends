@@ -2866,11 +2866,10 @@ button.swiper-pagination-bullet {
     grid-gap: 2rem;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
+    place-items: center;
   }
   #intro .container .graphic {
-    width: 90%;
-    margin: auto;
-    margin-left: 0.5rem;
+    width: 75%;
     position: relative;
   }
   #intro .container .graphic > div {
@@ -3469,6 +3468,9 @@ button.swiper-pagination-bullet {
   #mission .container .text h2 {
     margin-bottom: 1rem;
   }
+  #intro .container {
+    place-items: unset;
+  }
   #intro .container .graphic {
     width: 50%;
     margin: auto;
@@ -3812,7 +3814,7 @@ button.swiper-pagination-bullet {
         grid-template-columns: repeat(3, 1fr);
     -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
     grid-gap: 2rem;
     position: absolute;
     bottom: -4rem;
