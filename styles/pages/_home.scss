@@ -830,7 +830,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-gap: 1rem;
-        padding: $padding-md $padding-sm;
+        padding: $padding-md $padding-md;
         place-items: center;
       }
     }

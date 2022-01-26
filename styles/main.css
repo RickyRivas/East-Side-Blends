@@ -3650,7 +3650,7 @@ button.swiper-pagination-bullet {
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     grid-gap: 1rem;
-    padding: 1rem 0.5rem;
+    padding: 1rem 1rem;
     place-items: center;
   }
 }
@@ -4410,7 +4410,7 @@ body {
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
     grid-gap: 2rem;
-    padding: 4rem 0.5rem;
+    padding: 4rem 1rem;
   }
   #about .container .img-container {
     width: 60%;
@@ -4551,10 +4551,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  #about .container {
-    margin: auto;
-    padding: 2rem 0.5rem;
-  }
   #about .container .img-container {
     width: 50%;
     justify-self: flex-end;
