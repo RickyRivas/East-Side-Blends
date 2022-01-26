@@ -70,7 +70,7 @@ products.forEach((product) => {
               </div>
               <div class="product-body">
                 <h4 class="item-name">${product.title}</h4>
-                <p class="price">${product.price} USD</p>
+                <p class="price">$${product.price} USD</p>
               </div>
             </div>
   `;

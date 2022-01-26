@@ -1588,8 +1588,8 @@ button.swiper-pagination-bullet {
   text-decoration: none;
   margin: 0.5rem;
   border-radius: 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   font-size: 0.875rem;
 }
 
@@ -1758,8 +1758,8 @@ button.swiper-pagination-bullet {
     width: 100%;
     -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #main-product .container > div {
     padding: 1.5em;
@@ -1826,8 +1826,8 @@ button.swiper-pagination-bullet {
     max-width: 1200px;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #main-product .container > div {
     padding: 1.5em;
@@ -1894,8 +1894,8 @@ button.swiper-pagination-bullet {
     max-width: 1200px;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #main-product .container > div {
     padding: 1.5em;
@@ -2880,8 +2880,8 @@ button.swiper-pagination-bullet {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #intro .container .graphic::before {
     background-color: #c59c5f;
@@ -3069,23 +3069,23 @@ button.swiper-pagination-bullet {
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     grid-gap: 1rem;
-    padding: 1rem 0.5rem;
+    padding: 1rem 1rem;
     place-items: center;
   }
   #master-barbers .container .barber-grid .item {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: auto 1fr;
-        grid-template-rows: auto 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     width: 100%;
     max-width: 450px;
     height: 100%;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #master-barbers .container .barber-grid .item .head {
     width: 100%;
-    height: 20rem;
+    height: 100%;
     position: relative;
     background-position: center;
   }
@@ -3122,11 +3122,11 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: white;
-    padding: 0.5rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
   }
   #master-barbers .container .barber-grid .item .item-body h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
   #master-barbers .container .barber-grid .item .item-body .social {
     display: -ms-grid;
@@ -3156,9 +3156,9 @@ button.swiper-pagination-bullet {
   }
   #master-barbers .container .barber-grid .item .item-body p {
     text-align: center;
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
+    margin-bottom: 2rem;
     color: #222;
+    line-height: 1.5;
   }
   #master-barbers .container .barber-grid .item .item-body a {
     margin: 0;
@@ -3173,22 +3173,52 @@ button.swiper-pagination-bullet {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 5rem 3rem;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/images/sp-img.jpg) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sp-img.jpg) center/cover;
+    text-align: center;
+  }
+  #suave-prods > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 5rem 3rem;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/images/suavecitopomade.jpg) center/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/suavecitopomade.jpg) center/cover;
-    text-align: center;
   }
-  #suave-prods h2 {
+  #suave-prods > div h2 {
     color: white;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
   }
-  #suave-prods p {
+  #suave-prods > div p {
     color: white;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  #suave-prods > div a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #suave-prods > div a p {
+    margin: 0;
+    color: black;
+    margin-right: 1rem;
+  }
+  #suave-prods > div a img {
+    width: 1.5rem;
   }
   #masonry-gallery {
     width: 100vw;
@@ -3283,6 +3313,7 @@ button.swiper-pagination-bullet {
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    grid-gap: 2rem;
     padding: 2rem 1rem;
   }
   #test .container .heading {
@@ -3312,7 +3343,14 @@ button.swiper-pagination-bullet {
     background-color: #c59c5f;
     margin-bottom: 1rem;
   }
-  #test .container .test {
+  #test .container .test-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-gap: 3rem;
+  }
+  #test .container .test-grid .test {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3327,11 +3365,10 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 2rem;
     position: relative;
     z-index: 2;
   }
-  #test .container .test::before {
+  #test .container .test-grid .test::before {
     content: "";
     width: 130px;
     height: 130px;
@@ -3344,7 +3381,7 @@ button.swiper-pagination-bullet {
     left: 15%;
     opacity: 5%;
   }
-  #test .container .test .test-context {
+  #test .container .test-grid .test .test-context {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3363,16 +3400,16 @@ button.swiper-pagination-bullet {
     line-height: 1.5;
     margin-bottom: 1rem;
   }
-  #test .container .test .test-context blockquote {
+  #test .container .test-grid .test .test-context blockquote {
     color: white;
   }
-  #test .container .test .test-context blockquote::before {
+  #test .container .test-grid .test .test-context blockquote::before {
     content: "\201C";
   }
-  #test .container .test .test-context blockquote::after {
+  #test .container .test-grid .test .test-context blockquote::after {
     content: "\201C";
   }
-  #test .container .test .test-context .star-container {
+  #test .container .test-grid .test .test-context .star-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3384,11 +3421,11 @@ button.swiper-pagination-bullet {
             justify-content: center;
     margin-bottom: 1rem;
   }
-  #test .container .test .test-context .star-container img {
+  #test .container .test-grid .test .test-context .star-container img {
     width: 1.5rem;
     margin-right: 0.2rem;
   }
-  #test .container .test .client-info {
+  #test .container .test-grid .test .client-info {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3405,7 +3442,7 @@ button.swiper-pagination-bullet {
             flex-direction: column;
     color: white;
   }
-  #test .container .test .client-info img {
+  #test .container .test-grid .test .client-info img {
     width: 4em;
     border-radius: 50%;
     display: none;
@@ -3484,8 +3521,8 @@ button.swiper-pagination-bullet {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #intro .container .graphic::before {
     background-color: #c59c5f;
@@ -3543,6 +3580,63 @@ button.swiper-pagination-bullet {
         grid-template-rows: 1fr 1fr;
     grid-gap: 1rem;
   }
+  #suave-prods {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5rem 3rem;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/images/sp-img.jpg) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sp-img.jpg) center/cover;
+    text-align: center;
+  }
+  #suave-prods > div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    grid-gap: 5rem;
+    max-width: 1200px;
+    margin: auto;
+    place-items: center;
+  }
+  #suave-prods > div h2 {
+    color: white;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  #suave-prods > div p {
+    color: white;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  #suave-prods > div a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    white-space: nowrap;
+  }
+  #suave-prods > div a p {
+    margin: 0;
+    color: black;
+    margin-right: 1rem;
+  }
+  #suave-prods > div a img {
+    width: 1.5rem;
+  }
   #master-barbers .container {
     margin: auto;
     padding-bottom: unset;
@@ -3558,96 +3652,6 @@ button.swiper-pagination-bullet {
     grid-gap: 1rem;
     padding: 1rem 0.5rem;
     place-items: center;
-  }
-  #master-barbers .container .barber-grid .item {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: auto 1fr;
-        grid-template-rows: auto 1fr;
-    width: 100%;
-    height: 100%;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  }
-  #master-barbers .container .barber-grid .item .head {
-    width: 100%;
-    height: 20rem;
-    position: relative;
-    background-position: center;
-  }
-  #master-barbers .container .barber-grid .item .head img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  #master-barbers .container .barber-grid .item .head .tag {
-    position: absolute;
-    bottom: 0.5rem;
-    left: 0.5rem;
-    background-color: #d5b980;
-    color: black;
-    padding: 3px 16px;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: white;
-    padding: 0.5rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body h3 {
-    margin-bottom: 0.5rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social a {
-    background-color: #d5b980;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0.3rem;
-    border-radius: 0.5rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social a img {
-    width: 1rem;
-    margin: 0;
-  }
-  #master-barbers .container .barber-grid .item .item-body p {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-    color: #222;
-  }
-  #master-barbers .container .barber-grid .item .item-body a {
-    margin: 0;
   }
 }
 
@@ -3733,8 +3737,8 @@ button.swiper-pagination-bullet {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #intro .container .graphic::before {
     background-color: #c59c5f;
@@ -3812,8 +3816,8 @@ button.swiper-pagination-bullet {
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
     padding: 1rem 2rem;
     grid-gap: 2rem;
     position: absolute;
@@ -3922,17 +3926,17 @@ button.swiper-pagination-bullet {
   #master-barbers .container .barber-grid .item {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: auto 1fr;
-        grid-template-rows: auto 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     width: 100%;
-    max-width: 375px;
+    max-width: 450px;
     height: 100%;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #master-barbers .container .barber-grid .item .head {
     width: 100%;
-    height: 15rem;
+    height: 100%;
     position: relative;
     background-position: center;
   }
@@ -3951,7 +3955,7 @@ button.swiper-pagination-bullet {
     color: black;
     padding: 3px 16px;
     border-radius: 2rem;
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
   #master-barbers .container .barber-grid .item .item-body {
     width: 100%;
@@ -3959,9 +3963,9 @@ button.swiper-pagination-bullet {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -3969,12 +3973,11 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: center;
-    background-color: white;
-    padding: 0.5rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
   }
   #master-barbers .container .barber-grid .item .item-body h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
   #master-barbers .container .barber-grid .item .item-body .social {
     display: -ms-grid;
@@ -4004,9 +4007,9 @@ button.swiper-pagination-bullet {
   }
   #master-barbers .container .barber-grid .item .item-body p {
     text-align: center;
-    margin-bottom: 1rem;
-    font-size: 0.7875rem;
+    margin-bottom: 2rem;
     color: #222;
+    line-height: 1.5;
   }
   #master-barbers .container .barber-grid .item .item-body a {
     margin: 0;
@@ -4112,7 +4115,7 @@ button.swiper-pagination-bullet {
         grid-template-rows: 1fr;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 2rem;
   }
   #suave-prods {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/images/suavecitopomade.jpg) center/fixed;
@@ -4423,6 +4426,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     position: relative;
+    z-index: 1;
   }
   #about .container .img-container::before {
     content: "";
@@ -4585,8 +4589,8 @@ body {
     top: 5rem;
     left: -7rem;
     max-width: 60%;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #about .container .img-container .img-ab-2 {
     position: absolute;
@@ -4594,8 +4598,8 @@ body {
     left: -7rem;
     max-width: 60%;
     bottom: 5rem;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #about .container .desc {
     display: -webkit-box;
@@ -4655,8 +4659,8 @@ body {
     top: 5rem;
     left: -7rem;
     max-width: 60%;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #about .container .img-container .img-ab-2 {
     position: absolute;
@@ -4664,8 +4668,8 @@ body {
     left: -7rem;
     max-width: 60%;
     bottom: 5rem;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #about .container .desc {
     display: -webkit-box;
@@ -4725,8 +4729,8 @@ body {
     top: 5rem;
     left: -7rem;
     max-width: 60%;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
   #about .container .img-container .img-ab-2 {
     position: absolute;
@@ -4734,8 +4738,8 @@ body {
     left: -7rem;
     max-width: 60%;
     bottom: 5rem;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
 }
 
@@ -4774,7 +4778,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 2rem 0.5rem;
+    padding: 2rem 1rem;
   }
   #services .container .heading {
     display: -webkit-box;
@@ -4822,8 +4826,8 @@ body {
     -ms-grid-rows: max-content max-content;
         grid-template-rows: -webkit-max-content -webkit-max-content;
         grid-template-rows: max-content max-content;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
     height: 100%;
     width: 100%;
   }
@@ -5679,8 +5683,8 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .profile-intro :nth-child(2) :nth-child(3) .profile-btn {
     font-size: 17px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
     padding: 10px 30px;
     border-radius: 0;
     color: white;
@@ -5772,8 +5776,8 @@ input[type="number"]::-webkit-outer-spin-button {
     display: grid;
     -ms-grid-columns: auto 2fr 1fr;
         grid-template-columns: auto 2fr 1fr;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
     padding: 1rem 0;
     overflow: hidden;
     position: relative;
