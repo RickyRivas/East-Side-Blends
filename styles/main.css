@@ -1,3 +1,4 @@
+/** @format */
 /* Roots */
 :root {
   --standard-gold: #d5b980;
@@ -29,6 +30,152 @@ html {
 }
 
 /** @format */
+/** @format */
+.dark-mode-button {
+  background: transparent;
+  border: none;
+  height: 40px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.top-dark-mode-button {
+  position: absolute;
+  top: 3.8rem;
+  right: 1.2rem;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  z-index: 1000;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.top-dark-mode-button .dark-toggle {
+  background: #e6e6e6;
+  border-color: #e6e6e6;
+  width: 35px;
+}
+
+.top-dark-mode-button:after {
+  content: "DARK";
+  position: absolute;
+  color: #fff;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 22px;
+  top: 10px;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+body.dark-mode .top-dark-mode-button:after {
+  content: "LIGHT";
+  color: white;
+  top: 12px;
+}
+
+.dark-toggle {
+  margin: 0;
+  width: 30px;
+  height: 16px;
+  z-index: 20;
+  border-radius: 10px;
+  background: transparent;
+  border: 3px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 1000;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: center;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+body.dark-mode .dark-toggle {
+  background: #d5b980;
+  border: none;
+}
+
+.dark-toggle span {
+  height: 20px;
+  width: 20px;
+  left: -8px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+body.dark-mode .dark-toggle span {
+  left: 15px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.top-dark-mode-button .dark-toggle {
+  background: #e6e6e6;
+  border-color: #e6e6e6;
+  width: 35px;
+}
+
+/* Begin adding your dark mode styles here, like so: */
+@media (min-width: 768px) {
+  .top-dark-mode-button {
+    right: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .top-dark-mode-button {
+    right: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .top-dark-mode-button {
+    top: 5rem;
+    right: 2.5rem;
+  }
+}
+
+body.dark-mode {
+  background: #171717;
+}
+
+body.dark-mode p {
+  color: #dddddd;
+}
+
 /** @format */
 @media (min-width: 0px) {
   body {
@@ -64,7 +211,7 @@ html {
     -webkit-box-shadow: none;
             box-shadow: none;
     border: 0;
-    padding: 0.5em;
+    padding: 1rem;
     width: 100%;
     height: 10vh;
   }
@@ -572,6 +719,9 @@ html {
   footer .site-credit a {
     color: #d5b980;
     text-decoration: none;
+  }
+  body.dark-mode footer {
+    background-color: black;
   }
 }
 
@@ -2957,6 +3107,29 @@ button.swiper-pagination-bullet {
   #intro .container .text .stats {
     display: none;
   }
+  body.dark-mode #intro {
+    background-color: #171717;
+  }
+  body.dark-mode #intro .container .text h2 {
+    color: white;
+  }
+  body.dark-mode #intro .container .text h3 {
+    color: white;
+  }
+  body.dark-mode #intro .container .text .line {
+    background-color: #c59c5f;
+  }
+  body.dark-mode #intro .container .text .intro-test h4 {
+    color: #dddddd;
+  }
+  body.dark-mode #intro .container .text .stats {
+    background-color: #2b2b2b;
+    -webkit-box-shadow: 0 -2px 10px black;
+            box-shadow: 0 -2px 10px black;
+  }
+  body.dark-mode #intro .container .text .stats h5 {
+    color: white;
+  }
   #mission {
     width: 100vw;
     background-color: #f9f9f9;
@@ -3163,6 +3336,24 @@ button.swiper-pagination-bullet {
   #master-barbers .container .barber-grid .item .item-body a {
     margin: 0;
   }
+  body.dark-mode #master-barbers .container .heading h2 {
+    color: white;
+  }
+  body.dark-mode #master-barbers .container .heading .line {
+    background-color: #c59c5f;
+  }
+  body.dark-mode #master-barbers .container .heading p {
+    color: #dddddd;
+  }
+  body.dark-mode #master-barbers .container .barber-grid .item .item-body {
+    background-color: #2b2b2b;
+  }
+  body.dark-mode #master-barbers .container .barber-grid .item .item-body h3 {
+    color: white;
+  }
+  body.dark-mode #master-barbers .container .barber-grid .item .item-body p {
+    color: #dddddd;
+  }
   #suave-prods {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3303,6 +3494,15 @@ button.swiper-pagination-bullet {
        object-fit: cover;
     -webkit-transition: 500ms;
     transition: 500ms;
+  }
+  body.dark-mode #masonry-gallery .container .heading h2 {
+    color: white;
+  }
+  body.dark-mode #masonry-gallery .container .heading .line {
+    background-color: #c59c5f;
+  }
+  body.dark-mode #masonry-gallery .container .heading p {
+    color: #dddddd;
   }
   #test {
     width: 100vw;
@@ -4501,52 +4701,27 @@ body {
     width: 80%;
     background-color: #d5b980;
   }
-  body.dark-mode #about .container .desc {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  body.dark-mode #about .container .desc .flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding-left: 0.3rem;
-    margin-bottom: 0.5rem;
-  }
-  body.dark-mode #about .container .desc .flex img {
-    width: 1.5rem;
-    margin-right: 0.5rem;
+  body.dark-mode #about {
+    background-color: #171717;
   }
   body.dark-mode #about .container .desc .flex p:nth-of-type(1) {
-    margin-bottom: 0em;
-    color: black;
+    color: #dddddd;
   }
   body.dark-mode #about .container .desc p {
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    color: black;
+    color: #dddddd;
   }
   body.dark-mode #about .container .desc h2 {
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
-    color: black;
+    color: white;
   }
   body.dark-mode #about .container .desc h2 span {
     color: #d5b980;
-    margin-right: 0.4rem;
+    margin-right: 0.7rem;
   }
   body.dark-mode #about .container .desc h3 {
     color: white;
   }
   body.dark-mode #about .container .desc .line {
-    height: 1px;
-    width: 60%;
     background-color: #d5b980;
-    margin-bottom: 2rem;
   }
 }
 
@@ -4935,6 +5110,80 @@ body {
   #services a {
     margin-bottom: 2rem;
   }
+  body.dark-mode #services .container .heading h2 {
+    color: white;
+  }
+  body.dark-mode #services .container .heading .line {
+    background-color: #c59c5f;
+  }
+  body.dark-mode #services .container .heading p {
+    color: #dddddd;
+  }
+  body.dark-mode #services .container .grid .item .item-body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    grid-gap: 0.5rem;
+    padding: 1rem;
+    background-color: #2b2b2b;
+  }
+  body.dark-mode #services .container .grid .item .item-body .body-top h4 {
+    color: white;
+  }
+  body.dark-mode #services .container .grid .item .item-body .body-top p {
+    color: #dddddd;
+  }
+  body.dark-mode #services .container .grid .item .item-body .dur {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 1rem;
+  }
+  body.dark-mode #services .container .grid .item .item-body .dur p {
+    color: #dddddd;
+  }
+  body.dark-mode #services .container .grid .item .item-body .body-btm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body.dark-mode #services .container .grid .item .item-body .body-btm .price {
+    padding: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body.dark-mode #services .container .grid .item .item-body .body-btm .price p {
+    margin: 0;
+    color: #dddddd;
+    font-size: 0.875rem;
+  }
+  body.dark-mode #services .container .grid .item .item-body .body-btm .price span {
+    color: #c59c5f;
+  }
 }
 
 @media (min-width: 768px) {
@@ -5129,6 +5378,27 @@ body {
   }
   #products .container .checkout-container {
     padding: 2rem;
+  }
+  body.dark-mode #products .container .prods-grid .product {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: #2b2b2b;
+  }
+  body.dark-mode #products .container .prods-grid .product .product-image {
+    background-color: #2b2b2b;
+  }
+  body.dark-mode #products .container .prods-grid .product .product-image img {
+    width: 100%;
+    height: 100%;
+  }
+  body.dark-mode #products .container .prods-grid .product .product-body {
+    background-color: #2b2b2b;
+  }
+  body.dark-mode #products .container .prods-grid .product .product-body .item-name {
+    color: white;
+  }
+  body.dark-mode #products .container .prods-grid .product .product-body .price {
+    color: #dddddd;
   }
   .prod-modal {
     padding: 1rem;
@@ -5344,6 +5614,33 @@ body {
     background-color: black;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
+  }
+  body.dark-mode .prod-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  body.dark-mode .prod-modal .product-displayed {
+    background-color: #2b2b2b;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  body.dark-mode .prod-modal .product-displayed .product-body {
+    background-color: #2b2b2b;
+  }
+  body.dark-mode .prod-modal .product-displayed .product-body .modal-name {
+    color: white;
+  }
+  body.dark-mode .prod-modal .product-displayed .product-body .modal-desc {
+    color: #dddddd;
+  }
+  body.dark-mode .prod-modal .product-displayed .product-body .item-qty {
+    border: 1px solid #a4a4a4;
+    background-color: white;
+  }
+  body.dark-mode .prod-modal .product-displayed .close > div::before {
+    background-color: white;
+  }
+  body.dark-mode .prod-modal .product-displayed .close > div::after {
+    background-color: white;
   }
 }
 

@@ -102,41 +102,28 @@
   }
 
   body.dark-mode #about {
+    background-color: $primary-dark-bg;
     .container {
       .desc {
-        display: flex;
-        flex-direction: column;
-
         .flex {
-          display: flex;
-          padding-left: 0.3rem;
-          margin-bottom: $margin-sm;
-
           img {
-            width: 1.5rem;
-            margin-right: $margin-sm;
           }
 
           p:nth-of-type(1) {
-            margin-bottom: 0em;
-            color: black;
+            color: $dark-text;
           }
         }
 
         p {
-          margin-bottom: $margin-md;
-          line-height: 1.5;
-          color: black;
+          color: $dark-text;
         }
 
         h2 {
-          margin-bottom: $margin-sm;
-          font-size: $font-size-base * 2;
-          color: black;
+          color: white;
 
           span {
             color: $primary;
-            margin-right: 0.4rem;
+            margin-right: 0.7rem;
           }
         }
 
@@ -145,10 +132,7 @@
         }
 
         .line {
-          height: 1px;
-          width: 60%;
           background-color: $primary;
-          margin-bottom: $margin-lg;
         }
       }
     }

@@ -230,7 +230,48 @@
       }
     }
   }
+  body.dark-mode #intro {
+    background-color: #171717;
 
+    .container {
+      .graphic {
+      }
+
+      .text {
+        h2 {
+          color: white;
+        }
+
+        h3 {
+          color: white;
+        }
+
+        .line {
+          background-color: $darker-primary;
+        }
+
+        p {
+        }
+
+        a {
+        }
+
+        .intro-test {
+          h4 {
+            color: $dark-text;
+          }
+        }
+
+        .stats {
+          background-color: $secondary-dark-bg;
+          box-shadow: $dark-shadow;
+          h5 {
+            color: white;
+          }
+        }
+      }
+    }
+  }
   #mission {
     width: 100vw;
     background-color: #f9f9f9;
@@ -411,7 +452,52 @@
       }
     }
   }
+  body.dark-mode #master-barbers {
+    .container {
+      .heading {
+        h2 {
+          color: white;
+        }
 
+        .line {
+          background-color: $darker-primary;
+        }
+
+        p {
+          color: $dark-text;
+        }
+      }
+
+      .barber-grid {
+        .item {
+          .head {
+          }
+
+          .item-body {
+            background-color: $secondary-dark-bg;
+
+            h3 {
+              color: white;
+            }
+
+            .social {
+              a {
+                img {
+                }
+              }
+            }
+
+            p {
+              color: $dark-text;
+            }
+
+            a {
+            }
+          }
+        }
+      }
+    }
+  }
   #suave-prods {
     display: flex;
     justify-content: center;
@@ -526,7 +612,30 @@
       }
     }
   }
+  body.dark-mode #masonry-gallery {
+    .container {
+      .heading {
+        h2 {
+          color: white;
+        }
 
+        .line {
+          background-color: $darker-primary;
+        }
+
+        p {
+          color: $dark-text;
+        }
+      }
+
+      .masonry {
+        .col {
+          img {
+          }
+        }
+      }
+    }
+  }
   #test {
     width: 100vw;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),

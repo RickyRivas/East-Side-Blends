@@ -82,3 +82,28 @@ function initMap() {
     });
   });
 }
+
+// dark toggle
+let darkMode = localStorage.getItem("darkMode");
+
+const darkModeToggle = document
+  .querySelector(".dark-mode-button")
+  .addEventListener("click", () => {
+    darkMode = localStorage.getItem("darkMode");
+    if (darkMode !== "enabled") {
+      body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", "enabled");
+    } else {
+      body.classList.remove("dark-mode");
+      localStorage.setItem("darkMode", null);
+    }
+  });
+
+const checkLocalStorage = () => {
+  if (darkMode == "enabled") {
+    body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", "enabled");
+  }
+};
+
+checkLocalStorage();
