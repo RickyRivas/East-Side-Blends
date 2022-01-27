@@ -17,31 +17,31 @@ function renderScheduleModal() {
         <ul>
           <li>
             <p>Monday:</p>
-            <p>7am:5pm</p>
+            <p>7am-5pm</p>
           </li>
           <li>
             <p>Tuesday:</p>
-            <p>7am:5pm</p>
+            <p>7am-5pm</p>
           </li>
           <li>
             <p>Wednesday:</p>
-            <p>7am:5pm</p>
+            <p>7am-5pm</p>
           </li>
           <li>
             <p>Thursday:</p>
-            <p>7am:5pm</p>
+            <p>7am-5pm</p>
           </li>
           <li>
             <p>Friday:</p>
-            <p>7am:5pm</p>
+            <p>7am-5pm</p>
           </li>
           <li>
             <p>Saturday:</p>
-            <p>7am:5pm</p>
+            <p>7am-5pm</p>
           </li>
           <li>
             <p>Sunday:</p>
-            <p>7am:5pm</p>
+            <p>7am-5pm</p>
           </li>
         </ul>
       </div>

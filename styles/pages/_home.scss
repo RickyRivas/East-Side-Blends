@@ -321,7 +321,6 @@
       }
     }
   }
-
   #master-barbers {
     width: 100%;
 
@@ -409,9 +408,10 @@
             justify-content: flex-start;
             align-items: center;
             flex-direction: column;
-            background-color: #f9f9f9;
+            // background-color: #f9f9f9;
             padding: 1rem;
-
+            position: relative;
+            overflow: hidden;
             h3 {
               margin-bottom: $margin-md;
             }
@@ -1477,7 +1477,21 @@
     }
   }
 }
-
+body.dark-mode .schedule-modal {
+  .table {
+    background-color: $primary-dark-bg;
+    .close-sch-modal {
+      span {
+        &::before {
+          background-color: white;
+        }
+        &::after {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
 @keyframes opacityIn {
   from {
     opacity: 0;
