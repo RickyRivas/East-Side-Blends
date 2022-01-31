@@ -1,5 +1,8 @@
 /** @format */
 
+const endpoint = "https://app.snipcart.com/api/products?limit=2";
+fetch(endpoint);
+
 // Navigation 1
 const body = document.querySelector("body");
 const burger = document.querySelector(".hamburger");
