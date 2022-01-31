@@ -4,7 +4,6 @@
     "name": "ORIGINAL HOLD POMADE",
     "price": "12.99",
     "url": "https://rwt1.netlify.app/products",
-    "stock": 1,
     "inventoryManagementMethod": "Single",
     "allowOutOfStockPurchases": false
   },
@@ -13,7 +12,6 @@
     "name": "Suavecito Item #2",
     "price": "10.99",
     "url": "https://rwt1.netlify.app/products",
-    "stock": 0,
     "inventoryManagementMethod": "Single",
     "allowOutOfStockPurchases": false
   },
@@ -22,7 +20,6 @@
     "name": "Suavecito Item #3",
     "price": "9.99",
     "url": "https://rwt1.netlify.app/products",
-    "stock": 4,
     "inventoryManagementMethod": "Single",
     "allowOutOfStockPurchases": false
   },
@@ -31,7 +28,6 @@
     "name": "Suavecito Item #4",
     "price": "12.99",
     "url": "https://rwt1.netlify.app/products",
-    "stock": 5,
     "inventoryManagementMethod": "Single",
     "allowOutOfStockPurchases": false
   }
