@@ -1,5 +1,4 @@
 /** @format */
-
 const products = [
   {
     id: 1,
@@ -56,14 +55,14 @@ let prodsDom = "";
 products.forEach((product) => {
   prodsDom += `
   <div
-              id="item${product.id}"
+              id="#item1"
               class="product"
-              data-item-id="${product.id}"
-              data-item-img="${product.images[0]}"
-              data-item-desc="${product.description}"
-              data-item-url="${product.url}"
-              data-item-price="${product.price}"
-              data-item-title="${product.title}"
+              data-id="${product.id}"
+              data-img="${product.images[0]}"
+              data-desc="${product.description}"
+              data-url="${product.url}"
+              data-price="${product.price}"
+              data-title="${product.title}"
             >
               <div class="product-image">
                 <img alt="img" src="${product.images[0]}" />
