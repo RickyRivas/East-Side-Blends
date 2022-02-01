@@ -59,7 +59,6 @@ const fetchOutOfStockItems = async () => {
       return response.json();
     })
   .then((data) => {
-    console.log(data)
     const { items } = data;
     items.map((item) => {
       if (item.totalStock === 0) {
@@ -164,6 +163,7 @@ function renderModal(product) {
   `;
   if (product.instock === false) {
     modalEl.querySelector("#cart-btn").disabled = true;
+    modalEl.querySelector("#cart-btn").textContent = 'OUT OF STOCK';
   }
   body.append(modalEl);
   document.querySelector(".close").addEventListener("click", () => {
