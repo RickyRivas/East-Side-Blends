@@ -1,4 +1,5 @@
 /** @format */
+
 const products = [
   {
     id: 1,
@@ -50,12 +51,47 @@ const products = [
   },
 ];
 
+const endpoint = "https://app.snipcart.com/api/products";
+const secret =
+  "ST_OTMyOWU0NzctZjIxMy00ZGFhLWExNzctNDBkMjAxZDc3NzA3NjM3NzkyMDExNDY3NTIwNDg5" +
+  ":";
+const fetchOutOfStockItems = async () => {
+  let outOfStockArr = [];
+  // fetch products that are out of stock
+  await fetch("https://app.snipcart.com/api/products", {
+    headers: {
+      Authorization: `Basic ${btoa(secret)}`,
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      const { items } = data;
+      items.map((item) => {
+        if (item.totalStock === 0) {
+          outOfStockArr.push(item);
+        }
+      });
+    });
+  // get that array and mark the dom
+  outOfStockArr.map((item) => {
+    const id = item.userDefinedId;
+    const foundItem = products.find((item) => item.id == id);
+    foundItem.instock = false;
+    const foundItemDom = document.querySelector(`#item${item.userDefinedId}`);
+    foundItemDom.dataset.instock = "false";
+  });
+};
+fetchOutOfStockItems();
+
 let productsOutput = document.querySelector(".prods-grid");
 let prodsDom = "";
 products.forEach((product) => {
   prodsDom += `
   <div
-              id="#item1"
+              id="item${product.id}"
               class="product"
               data-id="${product.id}"
               data-img="${product.images[0]}"
@@ -63,6 +99,7 @@ products.forEach((product) => {
               data-url="${product.url}"
               data-price="${product.price}"
               data-title="${product.title}"
+              data-instock=''
             >
               <div class="product-image">
                 <img alt="img" src="${product.images[0]}" />
@@ -75,6 +112,7 @@ products.forEach((product) => {
   `;
 });
 productsOutput.innerHTML = prodsDom;
+
 // create product modal
 const allDomProducts = document.querySelectorAll(".product");
 allDomProducts.forEach((product) => {
@@ -132,6 +170,9 @@ function renderModal(product) {
                 </div>
             </div>
   `;
+  if (product.instock === false) {
+    modalEl.querySelector("#cart-btn").disabled = true;
+  }
   body.append(modalEl);
   document.querySelector(".close").addEventListener("click", () => {
     body.removeChild(modalEl);

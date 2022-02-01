@@ -1586,3 +1586,19 @@ body {
     height: max-content;
   }
 }
+
+.product[data-instock="false"] {
+  position: relative;
+  &::before {
+    content: "Out Of Stock";
+    background-color: #ff4526;
+    padding: 2px 17px;
+    font-size: $font-size-sm;
+    border-radius: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: -1rem;
+    transform: rotate(20deg);
+    color: white;
+  }
+}
