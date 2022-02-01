@@ -51,30 +51,22 @@ const products = [
   },
 ];
 
-const endpoint = "https://app.snipcart.com/api/products";
-const secret =
-  "ST_OTMyOWU0NzctZjIxMy00ZGFhLWExNzctNDBkMjAxZDc3NzA3NjM3NzkyMDExNDY3NTIwNDg5" +
-  ":";
 const fetchOutOfStockItems = async () => {
   let outOfStockArr = [];
   // fetch products that are out of stock
-  await fetch("https://app.snipcart.com/api/products", {
-    headers: {
-      Authorization: `Basic ${btoa(secret)}`,
-      Accept: "application/json",
-    },
-  })
+  await fetch("/.netlify/functions/snipcart")
     .then((response) => {
       return response.json();
     })
-    .then((data) => {
-      const { items } = data;
-      items.map((item) => {
-        if (item.totalStock === 0) {
-          outOfStockArr.push(item);
-        }
-      });
+  .then((data) => {
+    console.log(data)
+    const { items } = data;
+    items.map((item) => {
+      if (item.totalStock === 0) {
+        outOfStockArr.push(item);
+      }
     });
+  });
   // get that array and mark the dom
   outOfStockArr.map((item) => {
     const id = item.userDefinedId;

@@ -4619,7 +4619,7 @@ body {
   border-radius: 1.5rem;
   position: absolute;
   top: 1rem;
-  right: -1rem;
+  right: 0rem;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
   color: white;
