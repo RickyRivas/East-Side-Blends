@@ -97,6 +97,10 @@
             background-color: $primary;
           }
         }
+        a {
+          width: max-content;
+          margin: 0;
+        }
       }
     }
   }
