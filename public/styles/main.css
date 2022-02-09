@@ -5612,6 +5612,9 @@ body {
   .prod-modal .product-displayed .product-body button:disabled {
     opacity: 0.3;
   }
+  .prod-modal .product-displayed .product-body button:disabled:hover {
+    opacity: .3;
+  }
   .prod-modal .product-displayed .close {
     position: absolute;
     top: 1rem;
