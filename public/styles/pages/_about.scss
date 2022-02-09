@@ -88,7 +88,7 @@
           margin-bottom: $margin-lg;
 
           img {
-            width: 2rem;
+            width: 3rem;
           }
 
           .line {
@@ -111,6 +111,7 @@
       .desc {
         .flex {
           img {
+            filter: invert(100%);
           }
 
           p:nth-of-type(1) {

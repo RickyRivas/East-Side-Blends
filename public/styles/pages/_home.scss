@@ -414,6 +414,7 @@
             overflow: hidden;
             h3 {
               margin-bottom: $margin-md;
+              position: relative;
             }
 
             .social {
@@ -442,6 +443,7 @@
               margin-bottom: $margin-lg;
               color: #222;
               line-height: 1.5;
+              z-index: 2;
             }
 
             a {
