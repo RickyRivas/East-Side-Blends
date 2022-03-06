@@ -12,6 +12,7 @@ const products = [
       "images/suavecito-firme-clay-4oz_400x.jpg",
       "images/suavecito-firme-clay-4oz_400x.jpg",
     ],
+    inStock: false,
   },
   {
     id: 2,
@@ -48,34 +49,11 @@ const products = [
       "images/suavecito-petroleum-pomade-side_2048x.jpg",
       "images/suavecito-petroleum-pomade-side_2048x.jpg",
     ],
+    inStock: false,
   },
 ];
 
-const fetchOutOfStockItems = async () => {
-  let outOfStockArr = [];
-  // fetch products that are out of stock
-  await fetch("/.netlify/functions/snipcart")
-    .then((response) => {
-      return response.json();
-    })
-  .then((data) => {
-    const { items } = data;
-    items.map((item) => {
-      if (item.totalStock === 0) {
-        outOfStockArr.push(item);
-      }
-    });
-  });
-  // get that array and mark the dom
-  outOfStockArr.map((item) => {
-    const id = item.userDefinedId;
-    const foundItem = products.find((item) => item.id == id);
-    foundItem.instock = false;
-    const foundItemDom = document.querySelector(`#item${item.userDefinedId}`);
-    foundItemDom.dataset.instock = "false";
-  });
-};
-fetchOutOfStockItems();
+// SNIPCART FUNCTION PLACEMENT
 
 let productsOutput = document.querySelector(".prods-grid");
 let prodsDom = "";
@@ -90,7 +68,7 @@ products.forEach((product) => {
               data-url="${product.url}"
               data-price="${product.price}"
               data-title="${product.title}"
-              data-instock=''
+              data-instock='${product.inStock}'
             >
               <div class="product-image">
                 <img alt="img" src="${product.images[0]}" />
@@ -161,7 +139,7 @@ function renderModal(product) {
                 </div>
             </div>
   `;
-  if (product.instock === false) {
+  if (product.inStock === false) {
     modalEl.querySelector("#cart-btn").disabled = true;
     modalEl.querySelector("#cart-btn").textContent = 'OUT OF STOCK';
   }

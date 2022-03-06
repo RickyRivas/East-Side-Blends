@@ -1,1 +1,29 @@
 node_modules
+
+
+
+# const fetchOutOfStockItems = async () => {
+#   let outOfStockArr = [];
+#   // fetch products that are out of stock
+#   await fetch("/.netlify/functions/snipcart")
+#     .then((response) => {
+#       return response.json();
+#     })
+#   .then((data) => {
+#     const { items } = data;
+#     items.map((item) => {
+#       if (item.totalStock === 0) {
+#         outOfStockArr.push(item);
+#       }
+#     });
+#   });
+#   // get that array and mark the dom
+#   outOfStockArr.map((item) => {
+#     const id = item.userDefinedId;
+#     const foundItem = products.find((item) => item.id == id);
+#     foundItem.instock = false;
+#     const foundItemDom = document.querySelector(`#item${item.userDefinedId}`);
+#     foundItemDom.dataset.instock = "false";
+#   });
+# };
+# fetchOutOfStockItems();
