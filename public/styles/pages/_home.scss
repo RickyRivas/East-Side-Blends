@@ -151,7 +151,7 @@
         width: 75%;
         position: relative;
 
-        & > div {
+        &>div {
           z-index: 2;
           position: relative;
 
@@ -230,12 +230,12 @@
       }
     }
   }
+
   body.dark-mode #intro {
     background-color: #171717;
 
     .container {
-      .graphic {
-      }
+      .graphic {}
 
       .text {
         h2 {
@@ -250,11 +250,9 @@
           background-color: $darker-primary;
         }
 
-        p {
-        }
+        p {}
 
-        a {
-        }
+        a {}
 
         .intro-test {
           h4 {
@@ -265,6 +263,7 @@
         .stats {
           background-color: $secondary-dark-bg;
           box-shadow: $dark-shadow;
+
           h5 {
             color: white;
           }
@@ -272,6 +271,7 @@
       }
     }
   }
+
   #mission {
     width: 100vw;
     background-color: #f9f9f9;
@@ -321,6 +321,7 @@
       }
     }
   }
+
   #master-barbers {
     width: 100%;
 
@@ -412,6 +413,7 @@
             padding: 1rem;
             position: relative;
             overflow: hidden;
+
             h3 {
               margin-bottom: $margin-md;
               position: relative;
@@ -454,6 +456,7 @@
       }
     }
   }
+
   body.dark-mode #master-barbers {
     .container {
       .heading {
@@ -472,8 +475,7 @@
 
       .barber-grid {
         .item {
-          .head {
-          }
+          .head {}
 
           .item-body {
             background-color: $secondary-dark-bg;
@@ -484,8 +486,7 @@
 
             .social {
               a {
-                img {
-                }
+                img {}
               }
             }
 
@@ -493,13 +494,13 @@
               color: $dark-text;
             }
 
-            a {
-            }
+            a {}
           }
         }
       }
     }
   }
+
   #suave-prods {
     display: flex;
     justify-content: center;
@@ -509,11 +510,12 @@
       url(/images/sp-img.jpg) center / cover;
     text-align: center;
 
-    & > div {
+    &>div {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
       h2 {
         color: white;
         margin-bottom: $margin-md;
@@ -524,17 +526,21 @@
         color: white;
         margin-bottom: $margin-md;
       }
+
       a {
         display: flex;
         justify-content: space-around;
         align-items: center;
+
         p {
           margin: 0;
           color: black;
           margin-right: 1rem;
         }
+
         img {
-          width: 1.5rem;
+          width: 1.5em;
+          height: 1.5em;
         }
       }
     }
@@ -614,6 +620,7 @@
       }
     }
   }
+
   body.dark-mode #masonry-gallery {
     .container {
       .heading {
@@ -632,12 +639,12 @@
 
       .masonry {
         .col {
-          img {
-          }
+          img {}
         }
       }
     }
   }
+
   #test {
     width: 100vw;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -670,10 +677,12 @@
           margin-bottom: $margin-md;
         }
       }
+
       .test-grid {
         display: grid;
         grid-template-rows: auto;
         grid-gap: 3rem;
+
         .test {
           width: 100%;
           display: flex;
@@ -726,7 +735,8 @@
               margin-bottom: $margin-md;
 
               img {
-                width: 1.5rem;
+                width: 1.5em;
+                height: 1.5em;
                 margin-right: 0.2rem;
               }
             }
@@ -801,8 +811,7 @@
           margin-bottom: $margin-md;
         }
 
-        p {
-        }
+        p {}
       }
     }
   }
@@ -816,7 +825,7 @@
         margin: auto;
         position: relative;
 
-        & > div {
+        &>div {
           z-index: 2;
           position: relative;
 
@@ -885,6 +894,7 @@
       }
     }
   }
+
   #suave-prods {
     display: flex;
     justify-content: center;
@@ -894,13 +904,14 @@
       url(/images/sp-img.jpg) center / cover;
     text-align: center;
 
-    & > div {
+    &>div {
       display: grid;
       grid-template-columns: 2fr 1fr;
       grid-gap: 5rem;
       max-width: 1200px;
       margin: auto;
       place-items: center;
+
       h2 {
         color: white;
         margin-bottom: $margin-md;
@@ -912,17 +923,20 @@
         margin-bottom: $margin-md;
         text-align: left;
       }
+
       a {
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: max-content;
         white-space: nowrap;
+
         p {
           margin: 0;
           color: black;
           margin-right: 1rem;
         }
+
         img {
           width: 1.5rem;
         }
@@ -1024,7 +1038,7 @@
         margin: auto;
         position: relative;
 
-        & > div {
+        &>div {
           z-index: 2;
           position: relative;
 
@@ -1190,6 +1204,7 @@
         grid-gap: 1rem;
         padding: unset;
         place-items: center;
+
         .item {
           display: grid;
           grid-template-rows: 1fr 1fr;
@@ -1479,14 +1494,17 @@
     }
   }
 }
+
 body.dark-mode .schedule-modal {
   .table {
     background-color: $primary-dark-bg;
+
     .close-sch-modal {
       span {
         &::before {
           background-color: white;
         }
+
         &::after {
           background-color: white;
         }
@@ -1494,6 +1512,7 @@ body.dark-mode .schedule-modal {
     }
   }
 }
+
 @keyframes opacityIn {
   from {
     opacity: 0;
@@ -1554,7 +1573,7 @@ body {
     align-items: center;
     cursor: pointer;
 
-    & > div {
+    &>div {
       position: relative;
       width: 100%;
       height: 2px;
@@ -1591,6 +1610,7 @@ body {
 
 .product[data-instock="false"] {
   position: relative;
+
   &::before {
     content: "Out Of Stock";
     background-color: #ff4526;

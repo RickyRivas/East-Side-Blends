@@ -38,7 +38,7 @@ barbers.forEach((barber) => {
   allItems += `
             <div class="item">
                 <div class="head">
-                  <img src='${barber.image}' alt="" class="">
+                  <img src='${barber.image}' alt="${barber.name}" class="" height='325' width='386'>
                   <div class='tag'>Master Barber</div>
                 </div>
                 <div class="item-body">

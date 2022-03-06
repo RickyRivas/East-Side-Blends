@@ -3463,7 +3463,8 @@ button.swiper-pagination-bullet {
     margin-right: 1rem;
   }
   #suave-prods > div a img {
-    width: 1.5rem;
+    width: 1.5em;
+    height: 1.5em;
   }
   #masonry-gallery {
     width: 100vw;
@@ -3676,7 +3677,8 @@ button.swiper-pagination-bullet {
     margin-bottom: 1rem;
   }
   #test .container .test-grid .test .test-context .star-container img {
-    width: 1.5rem;
+    width: 1.5em;
+    height: 1.5em;
     margin-right: 0.2rem;
   }
   #test .container .test-grid .test .client-info {
@@ -5118,6 +5120,7 @@ body {
   }
   #services .container .grid .item .pop img {
     width: 2rem;
+    height: 2em;
   }
   #services .container .grid .item .head {
     position: relative;
