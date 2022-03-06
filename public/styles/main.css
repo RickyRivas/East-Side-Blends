@@ -2940,8 +2940,8 @@ button.swiper-pagination-bullet {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/TFA_0285.jpg) center 10%/cover;
   }
   #landing .mySwiper .swiper-wrapper .swiper-2 {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/gimg3wide.jpg) center/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/gimg3wide.jpg) center/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/gimg3M.png) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/content/gimg3M.png) center/cover;
   }
   #landing .mySwiper .swiper-wrapper .swiper-3 {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/content/TFA_0413.jpg) center/cover;
@@ -3569,8 +3569,8 @@ button.swiper-pagination-bullet {
   }
   #test {
     width: 100vw;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/images/content/TFA_0168.jpg) center/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/content/TFA_0168.jpg) center/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/images/TFA_0168.webp) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/TFA_0168.webp) center/cover;
   }
   #test .container {
     width: 100%;
@@ -4385,8 +4385,8 @@ button.swiper-pagination-bullet {
 
 @media (min-width: 1200px) {
   #test {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/images/content/TFA_0169.jpg) center/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/content/TFA_0169.jpg) center/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/images/TFA_0169.webp) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/TFA_0169.webp) center/cover;
     background-attachment: fixed;
   }
   #test .container {
