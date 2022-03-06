@@ -557,6 +557,8 @@
     .container {
       margin: auto;
       width: 100%;
+      max-width: 1400px;
+      margin: auto;
 
       .heading {
         display: flex;
@@ -586,35 +588,38 @@
 
       .masonry {
         width: 100%;
-        max-width: 1400px;
-        margin: auto;
-        margin-bottom: $margin-lg;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0.5rem;
-        padding: 0 0.5rem;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        padding: 1rem;
 
         .col {
           display: grid;
           place-items: start;
-          grid-gap: 0.5rem;
+          grid-gap: 1rem;
           width: 100%;
-          height: max-content;
+          max-width: 500px;
+          margin: auto;
 
-          img {
-            align-self: start;
+          .item {
+            height: 100%;
             width: 100%;
-            //  height: 100%;
-            object-fit: cover;
-            transition: 500ms;
+            height: 275px;
+            position: relative;
 
-            // &:hover {
-            //   transform: scale(1.05);
-            //   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-            //     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-            //     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-            //   cursor: pointer;
-            // }
+            &:hover {
+              cursor: pointer;
+              opacity: 0.7;
+            }
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
           }
         }
       }
@@ -891,6 +896,26 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-gap: 1rem;
+      }
+    }
+  }
+
+  #masonry-gallery {
+    .container {
+      .masonry {
+        grid-template-columns: 1fr 1fr;
+
+        .col {
+          .item {
+            &:hover {
+              cursor: pointer;
+
+              &::after {
+                display: flex;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -1295,13 +1320,19 @@
         grid-template-columns: repeat(4, 1fr);
 
         .col {
-          img {
-            &:hover {
-              transform: scale(1.05);
-              box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-              cursor: pointer;
+          .item {
+            transition: all .5s;
+
+            img {
+              transition: all .5s;
+
+              &:hover {
+                transform: scale(1.05);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+                cursor: pointer;
+              }
             }
           }
         }
