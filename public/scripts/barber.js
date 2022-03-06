@@ -5,7 +5,7 @@ const barbers = [
   {
     id: 1,
     name: "Jonathan Sosa",
-    image: "/images/sosa.jpeg",
+    image: "/images/sosa.webp",
     link: "sosa.html",
     bio:
       "Jonathan has been with the East Side Blends family for more than six years. He takes pride in the level of detail that goes into everyone of his haircuts. ",
@@ -13,21 +13,21 @@ const barbers = [
   {
     id: 2,
     name: "Victor Cordero Zamora",
-    image: "/images/vic.jpeg",
+    image: "/images/vic.webp",
     bio:
       "Victor found expression in barbering while attending college for psychology. This realization ultimately led him to change his career path into becoming a master barber.",
   },
   {
     id: 3,
     name: "Yoroby Rivera",
-    image: "/images/yoroby.jpeg",
+    image: "/images/yoroby.webp",
     bio:
       "Yoroby started cutting hair in middle school and what he believed was only a hobby quickly turned into a skilled craft. He’s always looking for ways to improve his expertise.",
   },
   {
     id: 4,
     name: "Jorge Anaya",
-    image: "/images/jorge.jpeg",
+    image: "/images/jorge.webp",
     bio:
       "Jorge, once a client of the shop, attended Tulsa Tech and is the newest member of the East Side Blends family.",
   },
