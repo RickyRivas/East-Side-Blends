@@ -1,42 +1,46 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+.fixed {
+  position: fixed;
+  bottom: 1em;
+  right: .5em;
+  display: flex;
+  flex-direction: column;
+  z-index: 19;
+}
+
 .top-link {
   transition: all 0.25s ease-in-out;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: inline-flex;
-  z-index: 19;
   cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 1em 1em 0;
   border-radius: 50%;
   padding: 1px;
-  width: 40px;
-  height: 40px;
-  background: var(--standard-gold);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: $primary;
   border: 0;
+  position: relative;
 
   &.show {
-    visibility: visible;
-    opacity: 1;
+      visibility: visible;
+      opacity: 1;
   }
 
   &.hide {
-    visibility: hidden;
-    opacity: 0;
+      visibility: hidden;
+      opacity: 0;
   }
 
-  &:hover {
-    background-color: var(--standard-gold);
-
-    svg {
-      fill: #000000;
-    }
+  img {
+      width: 1.5em;
+      height: 1.5em;
   }
 }
+
+// .top-link:nth-child(1){
+//   margin-bottom: .5em;
+
+// }
 
 // Text meant only for screen readers.
 .screen-reader-text {
@@ -52,23 +56,23 @@
   clip: rect(1px, 1px, 1px, 1px);
 
   &:focus {
-    display: block;
-    top: 5px;
-    left: 5px;
-    z-index: 100000; // Above WP toolbar
-    clip-path: none;
-    background-color: #eee;
-    padding: 15px 23px 14px;
-    width: auto;
-    height: auto;
-    text-decoration: none;
-    line-height: normal;
-    color: #444;
-    font-size: 1em;
-    clip: auto !important;
+      display: block;
+      top: 5px;
+      left: 5px;
+      z-index: 100000; // Above WP toolbar
+      clip-path: none;
+      background-color: #eee;
+      padding: 15px 23px 14px;
+      width: auto;
+      height: auto;
+      text-decoration: none;
+      line-height: normal;
+      color: #444;
+      font-size: 1em;
+      clip: auto !important;
   }
-}
 
+}
 // Landing button
 @media (min-width: 0px) {
   .button {

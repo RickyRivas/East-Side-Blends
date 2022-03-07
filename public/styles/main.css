@@ -1638,30 +1638,40 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+.fixed {
+  position: fixed;
+  bottom: 1em;
+  right: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 19;
+}
+
 .top-link {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  z-index: 19;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 1em 1em 0;
   border-radius: 50%;
   padding: 1px;
-  width: 40px;
-  height: 40px;
-  background: var(--standard-gold);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #A88A61;
   border: 0;
+  position: relative;
 }
 
 .top-link.show {
@@ -1674,12 +1684,9 @@ button.swiper-pagination-bullet {
   opacity: 0;
 }
 
-.top-link:hover {
-  background-color: var(--standard-gold);
-}
-
-.top-link:hover svg {
-  fill: #000000;
+.top-link img {
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .screen-reader-text {
