@@ -2265,8 +2265,8 @@ button.swiper-pagination-bullet {
 /** @format */
 @media (min-width: 0px) {
   .page-header {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/content/TFA_0149.jpg) 50% 65%/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0149.jpg) 50% 65%/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/0149M.webp) 50% 65%/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/0149M.webp) 50% 65%/cover;
     height: 12rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2289,8 +2289,8 @@ button.swiper-pagination-bullet {
 
 @media (min-width: 768px) {
   .page-header {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/content/TFA_0149.jpg) 50% 70%/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/content/TFA_0149.jpg) 50% 70%/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/0149M.webp) 50% 70%/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/0149M.webp) 50% 70%/cover;
     height: 17rem;
   }
 }
@@ -3907,6 +3907,9 @@ button.swiper-pagination-bullet {
   }
   #master-barbers .container .barber-grid {
     width: 100%;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -4181,8 +4184,6 @@ button.swiper-pagination-bullet {
     width: 100%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
     padding: unset;
     place-items: center;
@@ -4372,6 +4373,101 @@ button.swiper-pagination-bullet {
 }
 
 @media (min-width: 1200px) {
+  #master-barbers .container .barber-grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  #master-barbers .container .barber-grid .item {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  }
+  #master-barbers .container .barber-grid .item .head {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-position: center;
+  }
+  #master-barbers .container .barber-grid .item .head img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #master-barbers .container .barber-grid .item .head .tag {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    background-color: #A88A61;
+    color: black;
+    padding: 3px 16px;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+  }
+  #master-barbers .container .barber-grid .item .item-body {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 1rem;
+  }
+  #master-barbers .container .barber-grid .item .item-body h3 {
+    margin-bottom: 1rem;
+  }
+  #master-barbers .container .barber-grid .item .item-body .social {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  #master-barbers .container .barber-grid .item .item-body .social a {
+    background-color: #A88A61;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+  }
+  #master-barbers .container .barber-grid .item .item-body .social a img {
+    width: 1rem;
+    margin: 0;
+  }
+  #master-barbers .container .barber-grid .item .item-body p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #222;
+    line-height: 1.5;
+  }
+  #master-barbers .container .barber-grid .item .item-body a {
+    margin: 0;
+  }
   #test {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/images/TFA_0169.webp) center/cover;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/TFA_0169.webp) center/cover;

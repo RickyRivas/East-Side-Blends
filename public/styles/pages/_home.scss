@@ -976,6 +976,7 @@
 
       .barber-grid {
         width: 100%;
+        max-width: max-content;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -1225,7 +1226,7 @@
       .barber-grid {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        // grid-template-columns: repeat(3, 1fr);
         grid-gap: 1rem;
         padding: unset;
         place-items: center;
@@ -1406,6 +1407,98 @@
 }
 
 @media (min-width: 1200px) {
+  #master-barbers {
+    .container {
+
+
+      .barber-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+
+        .item {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          width: 100%;
+          max-width: 450px;
+          height: 100%;
+          box-shadow: $box-shadow;
+
+          .head {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-position: center;
+
+            img {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            .tag {
+              position: absolute;
+              bottom: 0.5rem;
+              left: 0.5rem;
+              background-color: $primary;
+              color: black;
+              padding: 3px 16px;
+              border-radius: 2rem;
+              font-size: $font-size-sm;
+            }
+          }
+
+          .item-body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f9f9f9;
+            padding: 1rem;
+
+            h3 {
+              margin-bottom: $margin-md;
+            }
+
+            .social {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-gap: 0.5rem;
+              margin-bottom: $margin-md;
+
+              a {
+                background-color: $primary;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.3rem;
+                border-radius: 0.5rem;
+
+                img {
+                  width: 1rem;
+                  margin: 0;
+                }
+              }
+            }
+
+            p {
+              text-align: center;
+              margin-bottom: $margin-lg;
+              color: #222;
+              line-height: 1.5;
+            }
+
+            a {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
   #test {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url(/images/TFA_0169.webp) center / cover;
