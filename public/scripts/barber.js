@@ -5,7 +5,7 @@ const barbers = [
   {
     id: 1,
     name: "Jonathan Sosa",
-    image: "/images/sosa.webp",
+    image: "/images/sosa02.png",
     link: "sosa.html",
     bio:
       "Jonathan has been with the East Side Blends family for more than six years. He takes pride in the level of detail that goes into everyone of his haircuts. ",
