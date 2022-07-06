@@ -1,35 +1,30 @@
 /** @format */
 
 // Barber info
-const barbers = [
-  {
+const barbers = [{
     id: 1,
     name: "Jonathan Sosa",
     image: "/images/sosa02.png",
     link: "sosa.html",
-    bio:
-      "Jonathan has been with the East Side Blends family for more than six years. He takes pride in the level of detail that goes into everyone of his haircuts. ",
+    bio: "Jonathan has been with the East Side Blends family for more than six years. He takes pride in the level of detail that goes into everyone of his haircuts. ",
   },
   {
     id: 2,
     name: "Victor Cordero Zamora",
     image: "/images/vic.webp",
-    bio:
-      "Victor found expression in barbering while attending college for psychology. This realization ultimately led him to change his career path into becoming a master barber.",
+    bio: "Victor found expression in barbering while attending college for psychology. This realization ultimately led him to change his career path into becoming a master barber.",
   },
   {
     id: 3,
     name: "Yoroby Rivera",
     image: "/images/yoroby.webp",
-    bio:
-      "Yoroby started cutting hair in middle school and what he believed was only a hobby quickly turned into a skilled craft. He’s always looking for ways to improve his expertise.",
+    bio: "Yoroby started cutting hair in middle school and what he believed was only a hobby quickly turned into a skilled craft. He’s always looking for ways to improve his expertise.",
   },
   {
     id: 4,
     name: "Jorge Anaya",
     image: "/images/jorge.webp",
-    bio:
-      "Jorge, once a client of the shop, attended Tulsa Tech and is the newest member of the East Side Blends family.",
+    bio: "Jorge, once a client of the shop, attended Tulsa Tech and is the newest member of the East Side Blends family.",
   },
 ];
 const barbersOutput = document.querySelector(".barber-grid");
@@ -40,6 +35,9 @@ barbers.forEach((barber) => {
                 <div class="head">
                   <img src='${barber.image}' alt="${barber.name}" class="" height='325' width='386'>
                   <div class='tag'>Master Barber</div>
+                  <div class='social'>
+                    <img class="" src="/images/facebook-logo.svg" alt="" width="25" height="25" loading="lazy" decoding="async" />
+                  </div>
                 </div>
                 <div class="item-body">
                   <h3>${barber.name}</h3>
@@ -52,7 +50,3 @@ barbers.forEach((barber) => {
   `;
 });
 barbersOutput.innerHTML = allItems;
-// <div class='social'>
-//                 <a href=''><img src='/images/instagramwhite.svg'></a>
-//                 <a href=''><img src='/images/facebook-logo.svg'></a>
-//             </div>

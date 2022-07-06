@@ -392,13 +392,31 @@
 
             .tag {
               position: absolute;
-              bottom: 0.5rem;
-              left: 0.5rem;
+              bottom: 0rem;
+              left: 0rem;
               background-color: $primary;
               color: black;
               padding: 3px 16px;
-              border-radius: 2rem;
               font-size: $font-size-sm;
+            }
+
+            .social {
+              position: absolute;
+              bottom: 0rem;
+              right: 0rem;
+              background-color: $primary;
+              color: black;
+              font-size: $font-size-sm;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: .35em;
+
+              img {
+                width: 1em;
+                height: 1em;
+                position: relative;
+              }
             }
           }
 
@@ -1251,17 +1269,6 @@
               height: 100%;
               object-fit: cover;
             }
-
-            .tag {
-              position: absolute;
-              bottom: 0.5rem;
-              left: 0.5rem;
-              background-color: $primary;
-              color: black;
-              padding: 3px 16px;
-              border-radius: 2rem;
-              font-size: $font-size-sm;
-            }
           }
 
           .item-body {
@@ -1437,16 +1444,6 @@
               object-fit: cover;
             }
 
-            .tag {
-              position: absolute;
-              bottom: 0.5rem;
-              left: 0.5rem;
-              background-color: $primary;
-              color: black;
-              padding: 3px 16px;
-              border-radius: 2rem;
-              font-size: $font-size-sm;
-            }
           }
 
           .item-body {
@@ -1499,6 +1496,7 @@
       }
     }
   }
+
   #test {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url(/images/TFA_0169.webp) center / cover;
