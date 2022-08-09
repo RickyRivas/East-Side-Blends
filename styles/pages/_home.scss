@@ -324,6 +324,7 @@
 
   #master-barbers {
     width: 100%;
+    background-color: #f9f9f9;
 
     .container {
       display: flex;
@@ -475,50 +476,6 @@
     }
   }
 
-  #suave-prods {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 3rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(/images/sp-img.jpg) center / cover;
-    text-align: center;
-
-    &>div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-
-      h2 {
-        color: white;
-        margin-bottom: $margin-md;
-        font-size: $font-size-base * 1.8;
-      }
-
-      p {
-        color: white;
-        margin-bottom: $margin-md;
-      }
-
-      a {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        p {
-          margin: 0;
-          color: black;
-          margin-right: 1rem;
-        }
-
-        img {
-          width: 1.5em;
-          height: 1.5em;
-        }
-      }
-    }
-  }
 
   #masonry-gallery {
     width: 100vw;
@@ -858,54 +815,6 @@
     }
   }
 
-  #suave-prods {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 3rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(/images/sp-img.jpg) center / cover;
-    text-align: center;
-
-    &>div {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-gap: 5rem;
-      max-width: 1200px;
-      margin: auto;
-      place-items: center;
-
-      h2 {
-        color: white;
-        margin-bottom: $margin-md;
-        text-align: left;
-      }
-
-      p {
-        color: white;
-        margin-bottom: $margin-md;
-        text-align: left;
-      }
-
-      a {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: max-content;
-        white-space: nowrap;
-
-        p {
-          margin: 0;
-          color: black;
-          margin-right: 1rem;
-        }
-
-        img {
-          width: 1.5rem;
-        }
-      }
-    }
-  }
 
   #master-barbers {
     .container {
@@ -1438,12 +1347,6 @@
     }
   }
 
-  #suave-prods {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(/images/suavecitopomade.jpg) center / fixed;
-    background-attachment: fixed;
-    text-align: center;
-  }
 }
 
 @keyframes fadeDown {
