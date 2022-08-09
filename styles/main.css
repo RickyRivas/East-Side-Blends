@@ -2596,137 +2596,123 @@ button.swiper-pagination-bullet {
   #master-barbers {
     width: 100%;
     background-color: #f9f9f9;
+    padding: 5em 0;
   }
   #master-barbers .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding-bottom: 2rem;
+    flex-wrap: wrap;
   }
-  #master-barbers .container .heading {
+  #master-barbers .container .item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    margin: 1em;
+    max-width: 320px;
+  }
+}
+@media only screen and (min-width: 0px) and (min-width: 64em) {
+  #master-barbers .container .item {
+    width: 16em;
+  }
+}
+@media all and (min-width: 0px) {
+  #master-barbers .container .item .img-contain {
+    width: 100%;
+    height: 12em;
+  }
+}
+@media all and (min-width: 0px) {
+  #master-barbers .container .item .body {
+    padding: 1em;
+  }
+  #master-barbers .container .item .body h3 {
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+  }
+  #master-barbers .container .item .body p {
+    text-align: left;
+    font-size: 0.75em;
+    margin-bottom: 1em;
+  }
+  #master-barbers .container .item .body .btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  #master-barbers .container .item .body .btns a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em 0;
+    font-size: 0.6em;
+    background-color: #A88A61;
+    text-transform: uppercase;
+    margin-right: 0.5em;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.5s;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+  }
+  #master-barbers .container .item .body .btns a:hover {
+    background-color: #000;
+    color: white;
+  }
+}
+@media all and (min-width: 0px) {
+  #master-barbers .container .item:nth-child(1) .img-contain {
+    background: url(/images/sosa.webp) center 20%/cover no-repeat;
+  }
+}
+@media all and (min-width: 0px) {
+  #master-barbers .container .item:nth-child(2) .img-contain {
+    background: url(/images/vic.webp) center 20%/cover no-repeat;
+  }
+}
+@media all and (min-width: 0px) {
+  #master-barbers .container .item:nth-child(3) .img-contain {
+    background: url(/images/yoroby.webp) center 20%/cover no-repeat;
+  }
+}
+@media all and (min-width: 0px) {
+  #master-barbers .container .item:nth-child(4) .img-contain {
+    background: url(/images/jorge.webp) center 20%/cover no-repeat;
+  }
+}
+@media all and (min-width: 0px) {
+  .heading {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 2rem 1rem;
     text-align: center;
+    margin: auto;
     max-width: 800px;
   }
-  #master-barbers .container .heading h2 {
+  .heading h2 {
     margin-bottom: 1rem;
   }
-  #master-barbers .container .heading .line {
+  .heading .line {
     width: 150px;
     height: 2px;
     background-color: #c59c5f;
     margin-bottom: 1rem;
   }
-  #master-barbers .container .heading p {
+  .heading p {
     color: #222;
   }
-  #master-barbers .container .barber-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    grid-template-rows: 1fr;
-    grid-gap: 1rem;
-    padding: 1rem 1rem;
-    place-items: center;
-  }
-  #master-barbers .container .barber-grid .item {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    width: 100%;
-    max-width: 450px;
-    height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-  }
-  #master-barbers .container .barber-grid .item .head {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-position: center;
-  }
-  #master-barbers .container .barber-grid .item .head img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  #master-barbers .container .barber-grid .item .head .tag {
-    position: absolute;
-    bottom: 0rem;
-    left: 0rem;
-    background-color: #A88A61;
-    color: black;
-    padding: 3px 16px;
-    font-size: 0.875rem;
-  }
-  #master-barbers .container .barber-grid .item .head .social {
-    position: absolute;
-    bottom: 0rem;
-    right: 0rem;
-    background-color: #A88A61;
-    color: black;
-    font-size: 0.875rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.35em;
-  }
-  #master-barbers .container .barber-grid .item .head .social img {
-    width: 1em;
-    height: 1em;
-    position: relative;
-  }
-  #master-barbers .container .barber-grid .item .item-body {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  #master-barbers .container .barber-grid .item .item-body h3 {
-    margin-bottom: 1rem;
-    position: relative;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social a {
-    background-color: #A88A61;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.3rem;
-    border-radius: 0.5rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social a img {
-    width: 1rem;
-    margin: 0;
-  }
-  #master-barbers .container .barber-grid .item .item-body p {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #222;
-    line-height: 1.5;
-    z-index: 2;
-  }
-  #master-barbers .container .barber-grid .item .item-body a {
-    margin: 0;
-  }
+}
+@media all and (min-width: 0px) {
   #masonry-gallery {
     width: 100vw;
     padding-bottom: 2rem;
@@ -2740,28 +2726,6 @@ button.swiper-pagination-bullet {
     width: 100%;
     max-width: 1400px;
     margin: auto;
-  }
-  #masonry-gallery .container .heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem 1rem;
-    text-align: center;
-    margin: auto;
-    max-width: 800px;
-  }
-  #masonry-gallery .container .heading h2 {
-    margin-bottom: 1rem;
-  }
-  #masonry-gallery .container .heading .line {
-    width: 150px;
-    height: 2px;
-    background-color: #c59c5f;
-    margin-bottom: 1rem;
-  }
-  #masonry-gallery .container .heading p {
-    color: #222;
   }
   #masonry-gallery .container .masonry {
     width: 100%;
@@ -2793,6 +2757,8 @@ button.swiper-pagination-bullet {
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+@media all and (min-width: 0px) {
   #test {
     width: 100vw;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/TFA_0168.webp) center/cover;
@@ -2878,11 +2844,6 @@ button.swiper-pagination-bullet {
     width: 4em;
     border-radius: 50%;
     display: none;
-  }
-}
-@media (min-width: 600px) {
-  #master-barbers .container .barber-grid .item {
-    width: 100%;
   }
 }
 @media (min-width: 768px) {
@@ -2992,25 +2953,6 @@ button.swiper-pagination-bullet {
   #masonry-gallery .container .masonry .col .item:hover {
     cursor: pointer;
     opacity: 0.7;
-  }
-  #master-barbers .container {
-    margin: auto;
-    padding-bottom: unset;
-  }
-  #master-barbers .container .barber-grid {
-    width: 100%;
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
-    max-width: max-content;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 1rem;
-    padding: 1rem 1rem;
-    place-items: center;
-  }
-  #master-barbers .container .barber-grid .item {
-    font-size: 1em;
   }
 }
 @media (min-width: 1024px) {
@@ -3200,78 +3142,6 @@ button.swiper-pagination-bullet {
   #mission .container .text p {
     max-width: 450px;
   }
-  #master-barbers .container {
-    margin: auto;
-    padding-bottom: unset;
-  }
-  #master-barbers .container .barber-grid {
-    width: 100%;
-    display: grid;
-    grid-gap: 1rem;
-    padding: unset;
-    place-items: center;
-  }
-  #master-barbers .container .barber-grid .item {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    width: 100%;
-    max-width: 450px;
-    height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-  }
-  #master-barbers .container .barber-grid .item .head {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-position: center;
-  }
-  #master-barbers .container .barber-grid .item .head img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  #master-barbers .container .barber-grid .item .item-body {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    background-color: #f9f9f9;
-    padding: 1rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body h3 {
-    margin-bottom: 1rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social a {
-    background-color: #A88A61;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.3rem;
-    border-radius: 0.5rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social a img {
-    width: 1rem;
-    margin: 0;
-  }
-  #master-barbers .container .barber-grid .item .item-body p {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #222;
-    line-height: 1.5;
-  }
-  #master-barbers .container .barber-grid .item .item-body a {
-    margin: 0;
-  }
   #masonry-gallery .container .masonry {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -3346,70 +3216,6 @@ button.swiper-pagination-bullet {
   }
 }
 @media (min-width: 1200px) {
-  #master-barbers .container .barber-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  #master-barbers .container .barber-grid .item {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    width: 100%;
-    max-width: 450px;
-    height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-  }
-  #master-barbers .container .barber-grid .item .head {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-position: center;
-  }
-  #master-barbers .container .barber-grid .item .head img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  #master-barbers .container .barber-grid .item .item-body {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    background-color: #f9f9f9;
-    padding: 1rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body h3 {
-    margin-bottom: 1rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social a {
-    background-color: #A88A61;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.3rem;
-    border-radius: 0.5rem;
-  }
-  #master-barbers .container .barber-grid .item .item-body .social a img {
-    width: 1rem;
-    margin: 0;
-  }
-  #master-barbers .container .barber-grid .item .item-body p {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #222;
-    line-height: 1.5;
-  }
-  #master-barbers .container .barber-grid .item .item-body a {
-    margin: 0;
-  }
   #test {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/TFA_0169.webp) center/cover;
     background-attachment: fixed;

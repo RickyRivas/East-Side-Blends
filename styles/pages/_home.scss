@@ -325,157 +325,133 @@
   #master-barbers {
     width: 100%;
     background-color: #f9f9f9;
+    padding: 5em 0;
 
     .container {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      width: 100%;
-      max-width: 1200px;
-      margin: auto;
-      padding-bottom: $padding-lg;
+      flex-wrap: wrap;
 
-      .heading {
+      .item {
         display: flex;
         justify-content: center;
-        align-items: center;
         flex-direction: column;
-        padding: $padding-lg $padding-md;
-        text-align: center;
-        max-width: 800px;
+        align-items: center;
+        width: 80%;
+        box-shadow: rgb(0 0 0 / 10%) 0px 10px 50px;
+        margin: 1em;
+        max-width: 320px;
 
-        h2 {
-          margin-bottom: $margin-md;
+        @media only screen and (min-width: 64em) {
+          width: 16em;
         }
 
-        .line {
-          width: 150px;
-          height: 2px;
-          background-color: $darker-primary;
-          margin-bottom: $margin-md;
-        }
-
-        p {
-          color: $text-color;
-        }
-      }
-
-      .barber-grid {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-        grid-template-rows: 1fr;
-        grid-gap: 1rem;
-        padding: $padding-md $padding-md;
-        place-items: center;
-
-        .item {
-          display: grid;
-          grid-template-rows: 1fr 1fr;
+        // picture
+        .img-contain {
           width: 100%;
-          max-width: 450px;
-          height: 100%;
-          box-shadow: $box-shadow;
+          height: 12em;
+        }
 
-          .head {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            background-position: center;
+        // body
+        .body {
+          padding: 1em;
 
-            img {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-
-            .tag {
-              position: absolute;
-              bottom: 0rem;
-              left: 0rem;
-              background-color: $primary;
-              color: black;
-              padding: 3px 16px;
-              font-size: $font-size-sm;
-            }
-
-            .social {
-              position: absolute;
-              bottom: 0rem;
-              right: 0rem;
-              background-color: $primary;
-              color: black;
-              font-size: $font-size-sm;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              padding: .35em;
-
-              img {
-                width: 1em;
-                height: 1em;
-                position: relative;
-              }
-            }
+          h3 {
+            text-transform: uppercase;
+            margin-bottom: .5em;
+            font-size: .9em;
           }
 
-          .item-body {
-            width: 100%;
-            height: 100%;
+          p {
+            text-align: left;
+            font-size: .75em;
+            margin-bottom: 1em;
+          }
+
+          .btns {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            flex-direction: column;
-            // background-color: #f9f9f9;
-            padding: 1rem;
-            position: relative;
-            overflow: hidden;
-
-            h3 {
-              margin-bottom: $margin-md;
-              position: relative;
-            }
-
-            .social {
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              grid-gap: 0.5rem;
-              margin-bottom: $margin-md;
-
-              a {
-                background-color: $primary;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0.3rem;
-                border-radius: 0.5rem;
-
-                img {
-                  width: 1rem;
-                  margin: 0;
-                }
-              }
-            }
-
-            p {
-              text-align: center;
-              margin-bottom: $margin-lg;
-              color: #222;
-              line-height: 1.5;
-              z-index: 2;
-            }
+            width: 100%;
 
             a {
-              margin: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              padding: 1em 0;
+              font-size: .6em;
+              background-color: $primary;
+              text-transform: uppercase;
+              margin-right: .5em;
+              text-decoration: none;
+              color: #000;
+              cursor: pointer;
+              transition: all .5s;
+              letter-spacing: .2em;
+              font-weight: bold;
+
+              &:hover {
+                background-color: #000;
+                color: white;
+              }
             }
+          }
+        }
+
+        &:nth-child(1) {
+          .img-contain {
+            background: url(/images/sosa.webp) center 20% / cover no-repeat;
+          }
+        }
+
+        &:nth-child(2) {
+          .img-contain {
+            background: url(/images/vic.webp) center 20% / cover no-repeat;
+          }
+        }
+
+        &:nth-child(3) {
+          .img-contain {
+            background: url(/images/yoroby.webp) center 20% / cover no-repeat;
+          }
+        }
+
+        &:nth-child(4) {
+          .img-contain {
+            background: url(/images/jorge.webp) center 20% / cover no-repeat;
           }
         }
       }
     }
   }
 
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: $padding-lg $padding-md;
+    text-align: center;
+    margin: auto;
+    max-width: 800px;
+
+    h2 {
+      margin-bottom: $margin-md;
+    }
+
+    .line {
+      width: 150px;
+      height: 2px;
+      background-color: $darker-primary;
+      margin-bottom: $margin-md;
+    }
+
+    p {
+      color: $text-color;
+    }
+  }
 
   #masonry-gallery {
     width: 100vw;
@@ -491,31 +467,6 @@
       max-width: 1400px;
       margin: auto;
 
-      .heading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: $padding-lg $padding-md;
-        text-align: center;
-        margin: auto;
-        max-width: 800px;
-
-        h2 {
-          margin-bottom: $margin-md;
-        }
-
-        .line {
-          width: 150px;
-          height: 2px;
-          background-color: $darker-primary;
-          margin-bottom: $margin-md;
-        }
-
-        p {
-          color: $text-color;
-        }
-      }
 
       .masonry {
         width: 100%;
@@ -651,18 +602,6 @@
               display: none;
             }
           }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 600px) {
-  #master-barbers {
-    .container {
-      .barber-grid {
-        .item {
-          width: 100%;
         }
       }
     }
@@ -810,29 +749,6 @@
               opacity: 0.7;
             }
           }
-        }
-      }
-    }
-  }
-
-
-  #master-barbers {
-    .container {
-      margin: auto;
-      padding-bottom: unset;
-
-      .barber-grid {
-        width: 100%;
-        max-width: max-content;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 1rem;
-        padding: $padding-md $padding-md;
-        place-items: center;
-
-        .item {
-          font-size: 1em;
         }
       }
     }
@@ -1069,91 +985,6 @@
     }
   }
 
-  #master-barbers {
-    .container {
-      margin: auto;
-      padding-bottom: unset;
-
-      .barber-grid {
-        width: 100%;
-        display: grid;
-        // grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1rem;
-        padding: unset;
-        place-items: center;
-
-        .item {
-          display: grid;
-          grid-template-rows: 1fr 1fr;
-          width: 100%;
-          max-width: 450px;
-          height: 100%;
-          box-shadow: $box-shadow;
-
-          .head {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            background-position: center;
-
-            img {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-
-          .item-body {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            flex-direction: column;
-            background-color: #f9f9f9;
-            padding: 1rem;
-
-            h3 {
-              margin-bottom: $margin-md;
-            }
-
-            .social {
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              grid-gap: 0.5rem;
-              margin-bottom: $margin-md;
-
-              a {
-                background-color: $primary;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0.3rem;
-                border-radius: 0.5rem;
-
-                img {
-                  width: 1rem;
-                  margin: 0;
-                }
-              }
-            }
-
-            p {
-              text-align: center;
-              margin-bottom: $margin-lg;
-              color: #222;
-              line-height: 1.5;
-            }
-
-            a {
-              margin: 0;
-            }
-          }
-        }
-      }
-    }
-  }
 
   #masonry-gallery {
     .container {
@@ -1247,88 +1078,6 @@
 }
 
 @media (min-width: 1200px) {
-  #master-barbers {
-    .container {
-
-
-      .barber-grid {
-
-        grid-template-columns: repeat(3, 1fr);
-
-
-        .item {
-          display: grid;
-          grid-template-rows: 1fr 1fr;
-          width: 100%;
-          max-width: 450px;
-          height: 100%;
-          box-shadow: $box-shadow;
-
-          .head {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            background-position: center;
-
-            img {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-
-          }
-
-          .item-body {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            flex-direction: column;
-            background-color: #f9f9f9;
-            padding: 1rem;
-
-            h3 {
-              margin-bottom: $margin-md;
-            }
-
-            .social {
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              grid-gap: 0.5rem;
-              margin-bottom: $margin-md;
-
-              a {
-                background-color: $primary;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0.3rem;
-                border-radius: 0.5rem;
-
-                img {
-                  width: 1rem;
-                  margin: 0;
-                }
-              }
-            }
-
-            p {
-              text-align: center;
-              margin-bottom: $margin-lg;
-              color: #222;
-              line-height: 1.5;
-            }
-
-            a {
-              margin: 0;
-            }
-          }
-        }
-      }
-    }
-  }
 
   #test {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
