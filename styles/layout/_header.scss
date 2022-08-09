@@ -47,7 +47,7 @@
         text-decoration: none;
 
         img {
-          height: 8em;
+          height: 6em;
         }
 
         p {
@@ -214,6 +214,14 @@
 }
 
 @media (min-width: 1024px) {
+  .body-fixed {
+    position: relative;
+  }
+
+  .navlinks-overlay {
+    display: none;
+  }
+
   .hamburger {
     display: none !important;
     box-shadow: none;

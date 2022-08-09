@@ -12,17 +12,17 @@
 }
 
 html {
-  font-size: 13px;
+  font-size: 16px;
   height: 100%;
   font-family: "Satoshi", sans-serif;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 320px) {
   html {
-    font-size: 16px;
+    font-size: calc(16px + 6 * (100vw - 320px) / 680);
   }
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1000px) {
   html {
     font-size: 20px;
   }
@@ -244,7 +244,7 @@ body.dark-mode p {
     text-decoration: none;
   }
   header nav .logo-box img {
-    height: 8em;
+    height: 6em;
   }
   header nav .logo-box p {
     color: white;
@@ -390,6 +390,12 @@ body.dark-mode p {
   }
 }
 @media (min-width: 1024px) {
+  .body-fixed {
+    position: relative;
+  }
+  .navlinks-overlay {
+    display: none;
+  }
   .hamburger {
     display: none !important;
     box-shadow: none;
@@ -2416,7 +2422,7 @@ button.swiper-pagination-bullet {
   #landing .landing-grid .item {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
@@ -2637,7 +2643,6 @@ button.swiper-pagination-bullet {
     max-width: 450px;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-    font-size: 1.2em;
   }
   #master-barbers .container .barber-grid .item .head {
     width: 100%;
@@ -2815,10 +2820,6 @@ button.swiper-pagination-bullet {
     height: 12em;
     position: relative;
   }
-  #masonry-gallery .container .masonry .col .item:hover {
-    cursor: pointer;
-    opacity: 0.7;
-  }
   #masonry-gallery .container .masonry .col .item img {
     position: absolute;
     top: 0;
@@ -2827,15 +2828,6 @@ button.swiper-pagination-bullet {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-  }
-  body.dark-mode #masonry-gallery .container .heading h2 {
-    color: white;
-  }
-  body.dark-mode #masonry-gallery .container .heading .line {
-    background-color: #c59c5f;
-  }
-  body.dark-mode #masonry-gallery .container .heading p {
-    color: #dddddd;
   }
   #test {
     width: 100vw;
@@ -3032,6 +3024,10 @@ button.swiper-pagination-bullet {
   }
   #masonry-gallery .container .masonry .col .item:hover::after {
     display: flex;
+  }
+  #masonry-gallery .container .masonry .col .item:hover {
+    cursor: pointer;
+    opacity: 0.7;
   }
   #suave-prods {
     display: flex;
@@ -3565,7 +3561,7 @@ button.swiper-pagination-bullet {
   align-items: center;
 }
 .schedule-modal .table .close-sch-modal span {
-  width: 30px;
+  width: 1.5em;
   height: 2px;
   position: relative;
 }
