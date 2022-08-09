@@ -376,6 +376,7 @@
           max-width: 450px;
           height: 100%;
           box-shadow: $box-shadow;
+          font-size: 1.2em;
 
           .head {
             width: 100%;
@@ -475,50 +476,6 @@
     }
   }
 
-  body.dark-mode #master-barbers {
-    .container {
-      .heading {
-        h2 {
-          color: white;
-        }
-
-        .line {
-          background-color: $darker-primary;
-        }
-
-        p {
-          color: $dark-text;
-        }
-      }
-
-      .barber-grid {
-        .item {
-          .head {}
-
-          .item-body {
-            background-color: $secondary-dark-bg;
-
-            h3 {
-              color: white;
-            }
-
-            .social {
-              a {
-                img {}
-              }
-            }
-
-            p {
-              color: $dark-text;
-            }
-
-            a {}
-          }
-        }
-      }
-    }
-  }
-
   #suave-prods {
     display: flex;
     justify-content: center;
@@ -607,7 +564,7 @@
       .masonry {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 1rem;
         padding: 1rem;
 
@@ -622,7 +579,7 @@
           .item {
             height: 100%;
             width: 100%;
-            height: 275px;
+            height: 12em;
             position: relative;
 
             &:hover {
@@ -715,19 +672,6 @@
           position: relative;
           z-index: 2;
 
-          &::before {
-            content: "";
-            width: 130px;
-            height: 130px;
-            position: absolute;
-            background-image: url(/images/quotation-mark.svg);
-            background-position: center;
-            background-size: cover;
-            z-index: -1;
-            top: 30%;
-            left: 15%;
-            opacity: 5%;
-          }
 
           .test-context {
             width: 100%;
@@ -1001,6 +945,10 @@
         grid-gap: 1rem;
         padding: $padding-md $padding-md;
         place-items: center;
+
+        .item {
+          font-size: 1em;
+        }
       }
     }
   }

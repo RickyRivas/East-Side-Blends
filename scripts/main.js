@@ -5,6 +5,7 @@ const body = document.querySelector("body");
 const burger = document.querySelector(".hamburger");
 const navOverlay = document.querySelector(".navlinks-overlay");
 const nav = document.querySelector(".nav-links");
+const navlinks = Array.from(document.querySelectorAll(".nav-links li.nav-link"));
 
 const toggleEverything = () => {
   nav.classList.toggle("is-active");
@@ -15,6 +16,11 @@ const toggleEverything = () => {
 
 burger.addEventListener("click", toggleEverything);
 navOverlay.addEventListener("click", toggleEverything);
+
+
+navlinks.forEach(link => {
+  link.addEventListener('click', toggleEverything)
+})
 
 // Scroll to top logic
 const scrollToTopButton = document.getElementById("js-top");
@@ -82,28 +88,3 @@ function initMap() {
     });
   });
 }
-
-// dark toggle
-let darkMode = localStorage.getItem("darkMode");
-
-const darkModeToggle = document
-  .querySelector(".dark-mode-button")
-  .addEventListener("click", () => {
-    darkMode = localStorage.getItem("darkMode");
-    if (darkMode !== "enabled") {
-      body.classList.toggle("dark-mode");
-      localStorage.setItem("darkMode", "enabled");
-    } else {
-      body.classList.remove("dark-mode");
-      localStorage.setItem("darkMode", null);
-    }
-  });
-
-const checkLocalStorage = () => {
-  if (darkMode == "enabled") {
-    body.classList.toggle("dark-mode");
-    localStorage.setItem("darkMode", "enabled");
-  }
-};
-
-checkLocalStorage();

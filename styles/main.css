@@ -12,17 +12,17 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 13px;
   height: 100%;
   font-family: "Satoshi", sans-serif;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 768px) {
   html {
-    font-size: calc(16px + 6 * (100vw - 320px) / 680);
+    font-size: 16px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1300px) {
   html {
     font-size: 20px;
   }
@@ -244,7 +244,7 @@ body.dark-mode p {
     text-decoration: none;
   }
   header nav .logo-box img {
-    height: 6rem;
+    height: 8em;
   }
   header nav .logo-box p {
     color: white;
@@ -509,7 +509,7 @@ body.dark-mode p {
   footer {
     width: 100%;
     padding: 4rem 1rem;
-    background-color: #222;
+    background-color: #000814;
     z-index: 20;
     position: relative;
   }
@@ -568,7 +568,7 @@ body.dark-mode p {
     align-items: flex-start;
   }
   footer .container .logo-contain img {
-    width: 80%;
+    width: 10em;
     max-width: 500px;
     height: 100%;
     margin-bottom: 1em;
@@ -2637,6 +2637,7 @@ button.swiper-pagination-bullet {
     max-width: 450px;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    font-size: 1.2em;
   }
   #master-barbers .container .barber-grid .item .head {
     width: 100%;
@@ -2720,24 +2721,6 @@ button.swiper-pagination-bullet {
   #master-barbers .container .barber-grid .item .item-body a {
     margin: 0;
   }
-  body.dark-mode #master-barbers .container .heading h2 {
-    color: white;
-  }
-  body.dark-mode #master-barbers .container .heading .line {
-    background-color: #c59c5f;
-  }
-  body.dark-mode #master-barbers .container .heading p {
-    color: #dddddd;
-  }
-  body.dark-mode #master-barbers .container .barber-grid .item .item-body {
-    background-color: #2b2b2b;
-  }
-  body.dark-mode #master-barbers .container .barber-grid .item .item-body h3 {
-    color: white;
-  }
-  body.dark-mode #master-barbers .container .barber-grid .item .item-body p {
-    color: #dddddd;
-  }
   #suave-prods {
     display: flex;
     justify-content: center;
@@ -2814,7 +2797,7 @@ button.swiper-pagination-bullet {
   #masonry-gallery .container .masonry {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
     padding: 1rem;
   }
@@ -2829,7 +2812,7 @@ button.swiper-pagination-bullet {
   #masonry-gallery .container .masonry .col .item {
     height: 100%;
     width: 100%;
-    height: 275px;
+    height: 12em;
     position: relative;
   }
   #masonry-gallery .container .masonry .col .item:hover {
@@ -2896,19 +2879,6 @@ button.swiper-pagination-bullet {
     flex-direction: column;
     position: relative;
     z-index: 2;
-  }
-  #test .container .test-grid .test::before {
-    content: "";
-    width: 130px;
-    height: 130px;
-    position: absolute;
-    background-image: url(/images/quotation-mark.svg);
-    background-position: center;
-    background-size: cover;
-    z-index: -1;
-    top: 30%;
-    left: 15%;
-    opacity: 5%;
   }
   #test .container .test-grid .test .test-context {
     width: 100%;
@@ -3121,6 +3091,9 @@ button.swiper-pagination-bullet {
     grid-gap: 1rem;
     padding: 1rem 1rem;
     place-items: center;
+  }
+  #master-barbers .container .barber-grid .item {
+    font-size: 1em;
   }
 }
 @media (min-width: 1024px) {
