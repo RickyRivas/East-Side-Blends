@@ -3342,6 +3342,7 @@ button.swiper-pagination-bullet {
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
+  padding: 0;
 }
 .schedule-modal .table .heading h3 {
   text-transform: uppercase;
