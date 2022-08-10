@@ -515,7 +515,7 @@ body.dark-mode p {
   footer {
     width: 100%;
     padding: 4rem 1rem;
-    background-color: #000814;
+    background-color: #202020;
     z-index: 20;
     position: relative;
   }
@@ -625,11 +625,18 @@ body.dark-mode p {
     justify-content: center;
     align-items: center;
     padding: 1rem 0;
-    background-color: black;
+    background-color: #202020;
     color: white;
     z-index: 20;
     position: relative;
     text-align: center;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+  .credit a {
+    text-decoration: none;
+    color: #A88A61;
+    cursor: pointer;
   }
 }
 @media (min-width: 1024px) {
@@ -2596,13 +2603,16 @@ button.swiper-pagination-bullet {
   #master-barbers {
     width: 100%;
     background-color: #f9f9f9;
-    padding: 5em 0;
+    padding: 2em 0;
   }
   #master-barbers .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
   }
   #master-barbers .container .item {
     display: flex;
@@ -2618,27 +2628,37 @@ button.swiper-pagination-bullet {
 @media only screen and (min-width: 0px) and (min-width: 64em) {
   #master-barbers .container .item {
     width: 16em;
+    margin: 0.5em;
   }
 }
 @media all and (min-width: 0px) {
   #master-barbers .container .item .img-contain {
     width: 100%;
     height: 12em;
+    position: relative;
   }
 }
 @media all and (min-width: 0px) {
   #master-barbers .container .item .body {
     padding: 1em;
+    position: relative;
   }
   #master-barbers .container .item .body h3 {
     text-transform: uppercase;
-    margin-bottom: 0.5em;
-    font-size: 0.9em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   #master-barbers .container .item .body p {
     text-align: left;
     font-size: 0.75em;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.5;
   }
   #master-barbers .container .item .body .btns {
     display: flex;
@@ -2666,6 +2686,20 @@ button.swiper-pagination-bullet {
   #master-barbers .container .item .body .btns a:hover {
     background-color: #000;
     color: white;
+  }
+  #master-barbers .container .item .body .btns a:nth-last-of-type(1) {
+    margin: 0;
+  }
+  #master-barbers .container .item .body div.social {
+    position: absolute;
+    top: 1em;
+    right: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #master-barbers .container .item .body div.social img {
+    width: 2em;
   }
 }
 @media all and (min-width: 0px) {
